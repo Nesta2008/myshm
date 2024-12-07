@@ -1,0 +1,747 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 11693 16535 portrait
+encoding utf-8
+Sheet 1 4
+Title "Счетчики"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "Шайхуллин "
+Comment3 "Кулиев"
+Comment4 "Кулиев"
+$EndDescr
+Text Notes 7850 3150 0    98   ~ 0
+Q3
+Text Notes 8150 3150 0    98   ~ 0
+Q2
+Text Notes 7900 3350 0    98   ~ 0
+0
+Text Notes 8200 3350 0    98   ~ 0
+0
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD1
+U 1 1 6733FE7F
+P 2950 2800
+F 0 "DD1" H 2950 3195 79  0000 C CNN
+F 1 "1564ЛА3" H 2950 2400 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 2950 2300 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 2950 3200 79  0001 C CNN
+	1    2950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD1
+U 2 1 67340BB5
+P 4600 2800
+F 0 "DD1" H 4600 3195 79  0000 C CNN
+F 1 "1564ЛА3" H 4600 2400 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4600 2300 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4600 3200 79  0001 C CNN
+	2    4600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD1
+U 3 1 6734121E
+P 2950 4150
+F 0 "DD1" H 2950 4545 79  0000 C CNN
+F 1 "1564ЛА3" H 2950 3750 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 2950 3650 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 2950 4550 79  0001 C CNN
+	3    2950 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD1
+U 4 1 6734181E
+P 4600 4150
+F 0 "DD1" H 4600 4545 79  0000 C CNN
+F 1 "1564ЛА3" H 4600 3750 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4600 3650 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4600 4550 79  0001 C CNN
+	4    4600 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2800 3750 2800
+Wire Wire Line
+	3750 2800 3750 2700
+Wire Wire Line
+	3750 2700 4100 2700
+Wire Wire Line
+	2450 4050 2350 4050
+Wire Wire Line
+	2350 4050 2350 3400
+Wire Wire Line
+	2350 3400 3750 3400
+Wire Wire Line
+	3750 3400 3750 2800
+Connection ~ 3750 2800
+Wire Wire Line
+	3450 4150 3700 4150
+Wire Wire Line
+	3700 4150 3700 4250
+Wire Wire Line
+	3700 4250 4100 4250
+Wire Wire Line
+	4100 4050 4000 4050
+Wire Wire Line
+	4000 4050 4000 3600
+Wire Wire Line
+	4000 3600 5200 3600
+Wire Wire Line
+	5200 3600 5200 2800
+Wire Wire Line
+	5200 2800 5100 2800
+Wire Wire Line
+	4100 2900 4000 2900
+Wire Wire Line
+	4000 2900 4000 3400
+Wire Wire Line
+	4000 3400 5000 3400
+Wire Wire Line
+	5000 3400 5000 3900
+Wire Wire Line
+	5000 3900 5200 3900
+Wire Wire Line
+	5200 3900 5200 4150
+Wire Wire Line
+	5200 4150 5100 4150
+Wire Wire Line
+	2450 4250 2050 4250
+Wire Wire Line
+	2050 4250 2050 3650
+Wire Wire Line
+	2050 2900 2450 2900
+Wire Wire Line
+	2450 2700 2300 2700
+Wire Wire Line
+	2300 2700 2300 2250
+Wire Wire Line
+	2300 2250 5400 2250
+Wire Wire Line
+	5400 4150 5200 4150
+Connection ~ 5200 4150
+$Comp
+L Connector_Generic_GOST:CON X1
+U 1 1 6737DAC1
+P 1800 3650
+F 0 "X1" H 1693 3911 79  0000 C CNN
+F 1 "T" H 1600 3550 79  0001 C CNN
+F 2 "" H 1800 3650 60  0001 C CNN
+F 3 "" H 1550 3550 60  0001 C CNN
+F 4 "T" H 1693 3776 79  0000 C CNN "PIN"
+	1    1800 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3650 2050 3650
+Connection ~ 2050 3650
+Wire Wire Line
+	2050 3650 2050 2900
+$Comp
+L Connector_Generic_GOST:CON Q1
+U 1 1 673833B4
+P 5750 2800
+F 0 "Q1" H 5700 2700 79  0000 C CNN
+F 1 "Q0" H 5550 2700 79  0001 C CNN
+F 2 "" H 5750 2800 60  0001 C CNN
+F 3 "" H 5500 2700 60  0001 C CNN
+F 4 "Q0" H 5643 2926 79  0001 C CNN "PIN"
+	1    5750 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD2
+U 1 1 6738BF72
+P 2950 5200
+F 0 "DD2" H 2950 5595 79  0000 C CNN
+F 1 "1564ЛА3" H 2950 4800 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 2950 4700 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 2950 5600 79  0001 C CNN
+	1    2950 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD2
+U 2 1 6738BF78
+P 4600 5200
+F 0 "DD2" H 4600 5595 79  0000 C CNN
+F 1 "1564ЛА3" H 4600 4800 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4600 4700 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4600 5600 79  0001 C CNN
+	2    4600 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD2
+U 3 1 6738BF7E
+P 2950 6550
+F 0 "DD2" H 2950 6945 79  0000 C CNN
+F 1 "1564ЛА3" H 2950 6150 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 2950 6050 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 2950 6950 79  0001 C CNN
+	3    2950 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD2
+U 4 1 6738BF84
+P 4600 6550
+F 0 "DD2" H 4600 6945 79  0000 C CNN
+F 1 "1564ЛА3" H 4600 6150 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4600 6050 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4600 6950 79  0001 C CNN
+	4    4600 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 5200 3750 5200
+Wire Wire Line
+	3750 5200 3750 5100
+Wire Wire Line
+	3750 5100 4100 5100
+Wire Wire Line
+	2450 6450 2350 6450
+Wire Wire Line
+	2350 6450 2350 5800
+Wire Wire Line
+	2350 5800 3750 5800
+Wire Wire Line
+	3750 5800 3750 5200
+Connection ~ 3750 5200
+Wire Wire Line
+	3450 6550 3700 6550
+Wire Wire Line
+	3700 6550 3700 6650
+Wire Wire Line
+	3700 6650 4100 6650
+Wire Wire Line
+	4100 6450 4000 6450
+Wire Wire Line
+	4000 6450 4000 6000
+Wire Wire Line
+	4000 6000 5200 6000
+Wire Wire Line
+	5200 6000 5200 5200
+Wire Wire Line
+	5200 5200 5100 5200
+Wire Wire Line
+	4100 5300 4000 5300
+Wire Wire Line
+	4000 5300 4000 5800
+Wire Wire Line
+	4000 5800 5000 5800
+Wire Wire Line
+	5000 5800 5000 6300
+Wire Wire Line
+	5000 6300 5200 6300
+Wire Wire Line
+	5200 6300 5200 6550
+Wire Wire Line
+	5200 6550 5100 6550
+Wire Wire Line
+	2450 6650 2050 6650
+Wire Wire Line
+	2050 6650 2050 6050
+Wire Wire Line
+	2050 5300 2450 5300
+Wire Wire Line
+	2450 5100 2300 5100
+Wire Wire Line
+	2300 5100 2300 4650
+Wire Wire Line
+	2300 4650 5400 4650
+Wire Wire Line
+	5400 4650 5400 6550
+Wire Wire Line
+	5400 6550 5200 6550
+Connection ~ 5200 6550
+Wire Wire Line
+	1800 6050 2050 6050
+Connection ~ 2050 6050
+Wire Wire Line
+	2050 6050 2050 5300
+$Comp
+L Connector_Generic_GOST:CON Q2
+U 1 1 6738BFB5
+P 5750 5200
+F 0 "Q2" H 5650 5100 79  0000 C CNN
+F 1 "Q0" H 5550 5100 79  0001 C CNN
+F 2 "" H 5750 5200 60  0001 C CNN
+F 3 "" H 5500 5100 60  0001 C CNN
+F 4 "Q0" H 5643 5326 79  0001 C CNN "PIN"
+	1    5750 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD3
+U 1 1 67393E32
+P 2950 7800
+F 0 "DD3" H 2950 8195 79  0000 C CNN
+F 1 "1564ЛА3" H 2950 7400 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 2950 7300 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 2950 8200 79  0001 C CNN
+	1    2950 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD3
+U 2 1 67393E38
+P 4600 7800
+F 0 "DD3" H 4600 8195 79  0000 C CNN
+F 1 "1564ЛА3" H 4600 7400 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4600 7300 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4600 8200 79  0001 C CNN
+	2    4600 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD3
+U 3 1 67393E3E
+P 2950 9150
+F 0 "DD3" H 2950 9545 79  0000 C CNN
+F 1 "1564ЛА3" H 2950 8750 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 2950 8650 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 2950 9550 79  0001 C CNN
+	3    2950 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD3
+U 4 1 67393E44
+P 4600 9150
+F 0 "DD3" H 4600 9545 79  0000 C CNN
+F 1 "1564ЛА3" H 4600 8750 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4600 8650 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4600 9550 79  0001 C CNN
+	4    4600 9150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 7800 3750 7800
+Wire Wire Line
+	3750 7800 3750 7700
+Wire Wire Line
+	3750 7700 4100 7700
+Wire Wire Line
+	2450 9050 2350 9050
+Wire Wire Line
+	2350 9050 2350 8400
+Wire Wire Line
+	2350 8400 3750 8400
+Wire Wire Line
+	3750 8400 3750 7800
+Connection ~ 3750 7800
+Wire Wire Line
+	3450 9150 3700 9150
+Wire Wire Line
+	3700 9150 3700 9250
+Wire Wire Line
+	3700 9250 4100 9250
+Wire Wire Line
+	4100 9050 4000 9050
+Wire Wire Line
+	4000 9050 4000 8600
+Wire Wire Line
+	4000 8600 5200 8600
+Wire Wire Line
+	5200 8600 5200 7800
+Wire Wire Line
+	5200 7800 5100 7800
+Wire Wire Line
+	4100 7900 4000 7900
+Wire Wire Line
+	4000 7900 4000 8400
+Wire Wire Line
+	4000 8400 5000 8400
+Wire Wire Line
+	5000 8400 5000 8900
+Wire Wire Line
+	5000 8900 5200 8900
+Wire Wire Line
+	5200 8900 5200 9150
+Wire Wire Line
+	5200 9150 5100 9150
+Wire Wire Line
+	2450 9250 2050 9250
+Wire Wire Line
+	2050 9250 2050 8650
+Wire Wire Line
+	2050 7900 2450 7900
+Wire Wire Line
+	2450 7700 2300 7700
+Wire Wire Line
+	2300 7700 2300 7250
+Wire Wire Line
+	2300 7250 5400 7250
+Wire Wire Line
+	5400 7250 5400 9150
+Wire Wire Line
+	5400 9150 5200 9150
+Connection ~ 5200 9150
+Wire Wire Line
+	1800 8650 2050 8650
+Connection ~ 2050 8650
+Wire Wire Line
+	2050 8650 2050 7900
+$Comp
+L Connector_Generic_GOST:CON Q3
+U 1 1 67393E75
+P 5750 7800
+F 0 "Q3" H 5650 7700 79  0000 C CNN
+F 1 "Q0" H 5550 7700 79  0001 C CNN
+F 2 "" H 5750 7800 60  0001 C CNN
+F 3 "" H 5500 7700 60  0001 C CNN
+F 4 "Q0" H 5643 7926 79  0001 C CNN "PIN"
+	1    5750 7800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD4
+U 1 1 6739EAA0
+P 3000 10300
+F 0 "DD4" H 3000 10695 79  0000 C CNN
+F 1 "1564ЛА3" H 3000 9900 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 3000 9800 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 3000 10700 79  0001 C CNN
+	1    3000 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD4
+U 2 1 6739EAA6
+P 4650 10300
+F 0 "DD4" H 4650 10695 79  0000 C CNN
+F 1 "1564ЛА3" H 4650 9900 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4650 9800 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4650 10700 79  0001 C CNN
+	2    4650 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD4
+U 3 1 6739EAAC
+P 3000 11650
+F 0 "DD4" H 3000 12045 79  0000 C CNN
+F 1 "1564ЛА3" H 3000 11250 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 3000 11150 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 3000 12050 79  0001 C CNN
+	3    3000 11650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_CMOS_1564_GOST:1564ЛА3 DD4
+U 4 1 6739EAB2
+P 4650 11650
+F 0 "DD4" H 4650 12045 79  0000 C CNN
+F 1 "1564ЛА3" H 4650 11250 79  0001 C CNN
+F 2 "Package_CDFP_RU:401.14-5" H 4650 11150 79  0001 C CNN
+F 3 "http://www.voshod-krlz.ru/files/datasheets/1564LA3.pdf" H 4650 12050 79  0001 C CNN
+	4    4650 11650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 10300 3800 10300
+Wire Wire Line
+	3800 10300 3800 10200
+Wire Wire Line
+	3800 10200 4150 10200
+Wire Wire Line
+	2500 11550 2400 11550
+Wire Wire Line
+	2400 11550 2400 10900
+Wire Wire Line
+	2400 10900 3800 10900
+Wire Wire Line
+	3800 10900 3800 10300
+Connection ~ 3800 10300
+Wire Wire Line
+	3500 11650 3750 11650
+Wire Wire Line
+	3750 11650 3750 11750
+Wire Wire Line
+	3750 11750 4150 11750
+Wire Wire Line
+	4150 11550 4050 11550
+Wire Wire Line
+	4050 11550 4050 11100
+Wire Wire Line
+	4050 11100 5250 11100
+Wire Wire Line
+	5250 11100 5250 10300
+Wire Wire Line
+	5250 10300 5150 10300
+Wire Wire Line
+	4150 10400 4050 10400
+Wire Wire Line
+	4050 10400 4050 10900
+Wire Wire Line
+	4050 10900 5050 10900
+Wire Wire Line
+	5050 10900 5050 11400
+Wire Wire Line
+	5050 11400 5250 11400
+Wire Wire Line
+	5250 11400 5250 11650
+Wire Wire Line
+	5250 11650 5150 11650
+Wire Wire Line
+	2500 11750 2100 11750
+Wire Wire Line
+	2100 11750 2100 11150
+Wire Wire Line
+	2100 10400 2500 10400
+Wire Wire Line
+	2500 10200 2350 10200
+Wire Wire Line
+	2350 10200 2350 9750
+Wire Wire Line
+	2350 9750 5450 9750
+Wire Wire Line
+	5450 9750 5450 11650
+Wire Wire Line
+	5450 11650 5250 11650
+Connection ~ 5250 11650
+Wire Wire Line
+	1850 11150 2100 11150
+Connection ~ 2100 11150
+Wire Wire Line
+	2100 11150 2100 10400
+$Comp
+L Connector_Generic_GOST:CON Q4
+U 1 1 6739EADC
+P 5800 10300
+F 0 "Q4" H 5700 10200 79  0000 C CNN
+F 1 "Q0" H 5600 10200 79  0001 C CNN
+F 2 "" H 5800 10300 60  0001 C CNN
+F 3 "" H 5550 10200 60  0001 C CNN
+F 4 "Q0" H 5693 10426 79  0001 C CNN "PIN"
+	1    5800 10300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 2250 5400 4150
+Wire Wire Line
+	5750 2800 5650 2800
+Connection ~ 5200 2800
+Wire Wire Line
+	5650 2800 5650 4550
+Wire Wire Line
+	5650 4550 1800 4550
+Wire Wire Line
+	1800 4550 1800 6050
+Connection ~ 5650 2800
+Wire Wire Line
+	5650 2800 5200 2800
+Wire Wire Line
+	5650 5200 5650 6950
+Wire Wire Line
+	5650 6950 1800 6950
+Wire Wire Line
+	1800 6950 1800 8650
+Wire Wire Line
+	1850 9650 1850 11150
+Wire Wire Line
+	5750 5200 5650 5200
+Wire Wire Line
+	5650 5200 5200 5200
+Connection ~ 5650 5200
+Connection ~ 5200 5200
+Wire Wire Line
+	5750 7800 5650 7800
+Wire Wire Line
+	5650 7800 5200 7800
+Connection ~ 5650 7800
+Wire Wire Line
+	5650 7800 5650 9650
+Wire Wire Line
+	5650 9650 1850 9650
+Connection ~ 5200 7800
+Connection ~ 5250 10300
+Wire Wire Line
+	5250 10300 5800 10300
+Text Notes 8450 3150 0    98   ~ 0
+Q1
+Text Notes 8750 3150 0    98   ~ 0
+Q0
+Text Notes 8500 3350 0    98   ~ 0
+0
+Text Notes 7900 3600 0    98   ~ 0
+0
+Text Notes 8500 3600 0    98   ~ 0
+0
+Text Notes 8800 3600 0    98   ~ 0
+1
+Text Notes 7900 3850 0    98   ~ 0
+0
+Text Notes 7900 4100 0    98   ~ 0
+0
+Text Notes 8800 4100 0    98   ~ 0
+1
+Text Notes 7900 4350 0    98   ~ 0
+0
+Text Notes 8200 4350 0    98   ~ 0
+1
+Text Notes 8500 4350 0    98   ~ 0
+0
+Text Notes 7900 4600 0    98   ~ 0
+0
+Text Notes 8200 4600 0    98   ~ 0
+1
+Text Notes 8500 4600 0    98   ~ 0
+0
+Text Notes 8800 4600 0    98   ~ 0
+1
+Text Notes 7900 4850 0    98   ~ 0
+0
+Text Notes 8200 4850 0    98   ~ 0
+1
+Text Notes 7900 5100 0    98   ~ 0
+0
+Text Notes 8200 5100 0    98   ~ 0
+1
+Text Notes 8800 5100 0    98   ~ 0
+1
+Text Notes 8500 5350 0    98   ~ 0
+0
+Text Notes 8500 5600 0    98   ~ 0
+0
+Text Notes 8800 5600 0    98   ~ 0
+1
+Text Notes 8800 6100 0    98   ~ 0
+1
+Text Notes 8200 6350 0    98   ~ 0
+1
+Text Notes 8500 6350 0    98   ~ 0
+0
+Text Notes 8200 6600 0    98   ~ 0
+1
+Text Notes 8500 6600 0    98   ~ 0
+0
+Text Notes 8800 6600 0    98   ~ 0
+1
+Text Notes 8200 6850 0    98   ~ 0
+1
+Text Notes 8200 7100 0    98   ~ 0
+1
+Text Notes 8800 7100 0    98   ~ 0
+1
+Text Notes 7900 5350 0    98   ~ 0
+1
+Text Notes 7900 5600 0    98   ~ 0
+1
+Text Notes 7900 5850 0    98   ~ 0
+1
+Text Notes 7900 6100 0    98   ~ 0
+1
+Text Notes 7900 6350 0    98   ~ 0
+1
+Text Notes 7900 6600 0    98   ~ 0
+1
+Text Notes 7900 6850 0    98   ~ 0
+1
+Text Notes 7900 7100 0    98   ~ 0
+1
+Text Notes 8200 3600 0    98   ~ 0
+0
+Text Notes 8200 3850 0    98   ~ 0
+0
+Text Notes 8200 4100 0    98   ~ 0
+0
+Text Notes 8200 5350 0    98   ~ 0
+0
+Text Notes 8200 5600 0    98   ~ 0
+0
+Text Notes 8200 5850 0    98   ~ 0
+0
+Text Notes 8200 6100 0    98   ~ 0
+0
+Text Notes 8500 6850 0    98   ~ 0
+1
+Text Notes 8500 7100 0    98   ~ 0
+1
+Text Notes 8500 5850 0    98   ~ 0
+1
+Text Notes 8500 6100 0    98   ~ 0
+1
+Text Notes 8500 4850 0    98   ~ 0
+1
+Text Notes 8500 5100 0    98   ~ 0
+1
+Text Notes 8500 3850 0    98   ~ 0
+1
+Text Notes 8500 4100 0    98   ~ 0
+1
+Text Notes 8800 3350 0    98   ~ 0
+0
+Text Notes 8800 3850 0    98   ~ 0
+0
+Text Notes 8800 4350 0    98   ~ 0
+0
+Text Notes 8800 4850 0    98   ~ 0
+0
+Text Notes 8800 5350 0    98   ~ 0
+0
+Text Notes 8800 5850 0    98   ~ 0
+0
+Text Notes 8800 6350 0    98   ~ 0
+0
+Text Notes 8800 6850 0    98   ~ 0
+0
+Text Notes 7450 7100 0    98   ~ 0
+15
+Text Notes 7450 6850 0    98   ~ 0
+14
+Text Notes 7450 6600 0    98   ~ 0
+13
+Text Notes 7450 6350 0    98   ~ 0
+12
+Text Notes 7450 6100 0    98   ~ 0
+11
+Text Notes 7450 5850 0    98   ~ 0
+10
+Text Notes 7450 5600 0    98   ~ 0
+9
+Text Notes 7450 5350 0    98   ~ 0
+8
+Text Notes 7450 5100 0    98   ~ 0
+7
+Text Notes 7450 4850 0    98   ~ 0
+6
+Text Notes 7450 4600 0    98   ~ 0
+5
+Text Notes 7450 4350 0    98   ~ 0
+4
+Text Notes 7450 4100 0    98   ~ 0
+3
+Text Notes 7450 3850 0    98   ~ 0
+2
+Text Notes 7450 3600 0    98   ~ 0
+1
+Text Notes 7450 3350 0    98   ~ 0
+0
+Text Notes 7200 3150 0    98   ~ 0
+Number
+$Sheet
+S 1900 18050 500  150 
+U 6865530D
+F0 "Gen_Impuls" 50
+F1 "Gen_Impuls.sch" 50
+$EndSheet
+$Sheet
+S 3300 18100 500  150 
+U 686B3F82
+F0 "Deshifrator" 50
+F1 "Deshifrator.sch" 50
+$EndSheet
+$Sheet
+S 4800 18150 500  150 
+U 677BE47D
+F0 "Counter_2" 50
+F1 "Counter_2.sch" 50
+$EndSheet
+$EndSCHEMATC

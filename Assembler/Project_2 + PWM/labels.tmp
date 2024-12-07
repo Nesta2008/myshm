@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATtiny2313</DEVICE>
+ <WORKING_DIR>D:\RKD_Git\MyShm\Project_2 + PWM</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\tn2313def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <init><FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</FILE><LINE>23</LINE></init>
+  <main><FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</FILE><LINE>86</LINE></main>
+  <up><FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</FILE><LINE>89</LINE></up>
+  <Pause><FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</FILE><LINE>100</LINE></Pause>
+  <down><FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</FILE><LINE>94</LINE></down>
+  <P1><FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</FILE><LINE>102</LINE></P1>
+  <P2><FILE>D:\RKD_Git\MyShm\Project_2 + PWM\Project_2.asm</FILE><LINE>103</LINE></P2>
+ </LABELS>
+</ASSEMBLER_INFO>
