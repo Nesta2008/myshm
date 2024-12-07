@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1731953377 source:c:\users\home\desktop\summator\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1732019706 source:d:\rkd_git\myshm\prog_c\summator\summator\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1732185466 source:d:\rkd_git\myshm\prog_c\digital_comporator\main.c
+	<stdio.h>
+	<stdlib.h>
+
