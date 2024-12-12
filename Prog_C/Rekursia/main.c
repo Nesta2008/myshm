@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define var_task 2
+#define var_task 3
 #define size_massive 5
 
 int var;                                             // переменная выбора пользователя
@@ -9,8 +9,43 @@ int arr = size_massive;
 int first_massive [size_massive][size_massive];       //создание первого массива
 int second_massive [size_massive][size_massive];      //создание второго массива
 
+int print_massive (int arr[size_massive][size_massive])   //Функция печати двумерного массива
+    {
+        int fill_massive (int arr[size_massive][size_massive],int RANDOM_MAX)      // функция заполнения двумерного массива числами, где RANDOM_MAX верхняя граница
+    {
+        for (int i=0; i<size_massive; i++)
+            {
+                for (int k=0;k<size_massive; k++)
+                {
+                    arr[i][k]=rand()%RANDOM_MAX;
+                }
+            }
+    }
+        printf ("\n");
+        for (int i=0; i<size_massive; i++)
+            {
+                for (int k=0;k<size_massive; k++)
+                {
+                    printf ("%d\t", arr[i][k]);
+                }
+            printf ("\n");
+            }
+    }
+
+
+int fill_massive (int arr[size_massive][size_massive],int RANDOM_MAX)      // функция заполнения двумерного массива числами, где RANDOM_MAX верхняя граница
+    {
+        for (int i=0; i<size_massive; i++)
+            {
+                for (int k=0;k<size_massive; k++)
+                {
+                    arr[i][k]=rand()%RANDOM_MAX;
+                }
+            }
+    }
+
 #if var_task==1
-int result=0, a = 0, b = 1;           // переменные базовых значение порядка Фибоначчи для рекурсии
+
 
 int fibonach1(int n)                // функция вывода порядка Фибоначчи до требуемого значения через цикл
     {
@@ -28,6 +63,8 @@ int fibonach1(int n)                // функция вывода порядк�
 
 int fibonach(int n)                // функция вывода порядка Фибоначчи до требуемого значения через рекурсию
     {
+        static int result=0, a = 0, b = 1;           // переменные базовых значение порядка Фибоначчи для рекурсии
+
         if (a==0)  printf ("%d ", a);
         result = a+b;
         a = b;
@@ -37,31 +74,7 @@ int fibonach(int n)                // функция вывода порядка
         return    fibonach(n);
 
     }
-#elif var_task!=1
-int fill_massive (int arr[size_massive][size_massive],int RANDOM_MAX)      // функция заполнения двумерного массива числами, где RANDOM_MAX верхняя граница
-    {
-        for (int i=0; i<size_massive; i++)
-            {
-                for (int k=0;k<size_massive; k++)
-                {
-                    arr[i][k]=rand()%RANDOM_MAX;
-                }
-            }
-    }
-
-
-int print_massive (int arr[size_massive][size_massive])   //Функция печати двумерного массива
-    {
-        printf ("\n");
-        for (int i=0; i<size_massive; i++)
-            {
-                for (int k=0;k<size_massive; k++)
-                {
-                    printf ("%d\t", arr[i][k]);
-                }
-            printf ("\n");
-            }
-    }
+#elif var_task==2
 
 int change (int var)      // функция изменения второго массива
     {
@@ -92,10 +105,12 @@ int saper2 ()                    //"Сапер" через цикл For
 
     }
 }
-/*int z=0;                      //"Сапер" через рекурсию
+#elif var_task ==3
+
 int z1=0;
-int chek1(int *first_massive[z1][z])
+int chek1(int *first_massive[z1])       //"Сапер" через рекурсию
 {
+    static z=0;
     if (z==size_massive)
             {
                 z=0;
@@ -107,21 +122,21 @@ int chek1(int *first_massive[z1][z])
             }
     z++;
     print_massive(second_massive);
-    chek1 (*first_massive[z1][z]);
+    chek1 (first_massive[z1][z]);
 }
 
-int chek2(int *first_massive[z1][z])
+/*int chek2(int *first_massive[z1])
 {
     if (z1==size_massive)
             {
                 z1=0;
                 return;
             }
-    chek1 (*first_massive[z1][z]);
+    chek1 (*first_massive[z1]);
     z1++;
-    chek2 (*first_massive[z1][z]);
+    chek2 (*first_massive[z1]);
 }
-
+*/
 int saper ()
 {
    printf ("Print you choise 0 - 127 \n");
@@ -130,7 +145,7 @@ int saper ()
 
    int saper ();
 }
-*/
+
 #endif // var_task
 /*
 Задача 1
@@ -164,7 +179,7 @@ printf ("\n\n");
 
 Игра-аналог — «Сапёр» из Microsoft Windows.
 */
-#elif var_task !=1
+#elif (var_task ==2)
 printf ("task_2\n\n");
 
 
@@ -176,7 +191,16 @@ print_massive(second_massive);          // вывод на печать масс
 
 
 saper2();
-//saper();
+#elif (var_task ==3)
+printf ("task_2\n\n");
+
+
+fill_massive(first_massive, 128);       // заполнили первый массив
+fill_massive(second_massive, 1);        // заполнили второй массив
+print_massive(first_massive);           // вывод на печать массива 1
+print_massive(second_massive);          // вывод на печать массива 2
+
+saper();
 
 printf ("Exellent\n");
 #endif
