@@ -1,0 +1,86 @@
+# depslib dependency file v1.0
+1734286196 source:d:\kdgit\myshm\prog_c\structurs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"task_1.h"
+	"task_2.h"
+	"task_3.h"
+
+1734286299 d:\kdgit\myshm\prog_c\structurs\task_1.h
+
+1734279377 d:\kdgit\myshm\prog_c\structurs\task_2.h
+
+1734279377 d:\kdgit\myshm\prog_c\structurs\task_3.h
+
+1734286046 source:d:\kdgit\myshm\prog_c\structurs\task_1.c
+
+1734279870 source:d:\kdgit\myshm\prog_c\structurs\task_2.c
+
+1734279889 source:d:\kdgit\myshm\prog_c\structurs\task_3.c
+
+1734431345 source:d:\rkd_git\myshm\prog_c\structurs\task_1.c
+	"task_1.h"
+
+1734279870 source:d:\rkd_git\myshm\prog_c\structurs\task_2.c
+
+1734279889 source:d:\rkd_git\myshm\prog_c\structurs\task_3.c
+
+1734431345 source:d:\rkd_git\myshm\prog_c\structurs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"task_1.h"
+	"task_2.h"
+	"task_3.h"
+
+1734432851 d:\rkd_git\myshm\prog_c\structurs\task_1.h
+
+1734279377 d:\rkd_git\myshm\prog_c\structurs\task_2.h
+
+1734279377 d:\rkd_git\myshm\prog_c\structurs\task_3.h
+
+1735114312 source:f:\structurs\task_1.c
+	"task_1.h"
+
+1735038498 f:\structurs\task_1.h
+
+1735120308 source:f:\structurs\task_2.c
+	"task_2.h"
+
+1735284796 source:f:\structurs\task_3.c
+	"task_3.h"
+
+1735114312 source:e:\structurs\task_1.c
+	"task_1.h"
+
+1735038498 e:\structurs\task_1.h
+
+1735120308 source:e:\structurs\task_2.c
+	"task_2.h"
+
+1735290060 source:e:\structurs\task_3.c
+	"task_3.h"
+
+1735312706 source:e:\structurs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"task_1.h"
+	"task_2.h"
+	"task_3.h"
+
+1735045030 e:\structurs\task_2.h
+
+1735290072 e:\structurs\task_3.h
+
+1735284348 source:f:\structurs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"task_1.h"
+	"task_2.h"
+	"task_3.h"
+
+1735045030 f:\structurs\task_2.h
+
+1735289556 f:\structurs\task_3.h
+
