@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1736691867 source:d:\kdgit\Ñ\filters\sinus.c
+	"Sinus.h"
+
+1736692258 d:\kdgit\Ñ\filters\sinus.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1736691611 source:d:\kdgit\Ñ\filters\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Sinus.h"
+	"noise.h"
+
+1736691760 d:\kdgit\Ñ\filters\noise.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"Sinus.h"
+
+1736691761 source:d:\kdgit\Ñ\filters\noise.c
+	"noise.h"
+	<time.h>
+
+1736692795 source:d:\kdgit\Ñ\filters\files.c
+	"files.h"
+
+1736692781 d:\kdgit\Ñ\filters\files.h
+
+1736691761 source:d:\kdgit\myshm\prog_c\filters\noise.c
+	"noise.h"
+	<time.h>
+
+1736691760 d:\kdgit\myshm\prog_c\filters\noise.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"Sinus.h"
+
+1736867037 d:\kdgit\myshm\prog_c\filters\sinus.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1736867164 source:d:\kdgit\myshm\prog_c\filters\sinus.c
+	"Sinus.h"
+
+1736705366 source:d:\kdgit\myshm\prog_c\filters\files.c
+	<stdio.h>
+	<stdlib.h>
+	"files.h"
+
+1736705356 d:\kdgit\myshm\prog_c\filters\files.h
+	<stdio.h>
+	<stdlib.h>
+
+1736702411 source:d:\kdgit\myshm\prog_c\filters\ma_filter.c
+	"MA_filter.h"
+
+1736702397 d:\kdgit\myshm\prog_c\filters\ma_filter.h
+
+1736706143 source:d:\kdgit\myshm\prog_c\filters\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Sinus.h"
+	"noise.h"
+	"files.h"
+	"averrage_filter.h"
+	"sqr_averrage_filter.h"
+	"median_filter.h"
+	"MA_filter.h"
+
+1736702674 d:\kdgit\myshm\prog_c\filters\averrage_filter.h
+
+1736706149 d:\kdgit\myshm\prog_c\filters\sqr_averrage_filter.h
+
+1736702308 d:\kdgit\myshm\prog_c\filters\median_filter.h
+
+1736702327 source:d:\kdgit\myshm\prog_c\filters\median_filter.c
+	"median_filter.h"
+
+1736706146 source:d:\kdgit\myshm\prog_c\filters\sqr_averrage_filter.c
+	"sqr_averrage_filter.h"
+	"files.h"
+
+1736705376 source:d:\kdgit\myshm\prog_c\filters\averrage_filter.c
+	"averrage_filter.h"
+	"files.h"
+

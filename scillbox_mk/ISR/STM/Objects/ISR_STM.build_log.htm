@@ -1,0 +1,185 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Marat Shaikhullin, home, LIC=GE7DL-0VYRF-NTV3G-VPCBS-WYZS6-0SVQ7
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.38.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\KDGit\myshm\scillbox_mk\ISR\STM\ISR_STM.uvprojx
+Project File Date:  06/09/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'STM32F401CCU'
+Init/init.c(1): warning: In file included from...
+./Init/init.h(4): warning: In file included from...
+./Init/main.h(11): warning: In file included from...
+./Init/misc.h(117): warning: 'IS_NVIC_PRIORITY_GROUP' macro redefined [-Wmacro-redefined]
+#define IS_NVIC_PRIORITY_GROUP(GROUP) (((GROUP) == NVIC_PriorityGroup_0) || \
+        ^
+D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(306): note: previous definition is here
+#define IS_NVIC_PRIORITY_GROUP(GROUP) (((GROUP) == NVIC_PRIORITYGROUP_0) || \
+        ^
+Init/init.c(1): warning: In file included from...
+./Init/init.h(4): warning: In file included from...
+./Init/main.h(11): warning: In file included from...
+./Init/misc.h(123): warning: 'IS_NVIC_PREEMPTION_PRIORITY' macro redefined [-Wmacro-redefined]
+#define IS_NVIC_PREEMPTION_PRIORITY(PRIORITY)  ((PRIORITY) < 0x10)
+        ^
+D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(312): note: previous definition is here
+#define IS_NVIC_PREEMPTION_PRIORITY(PRIORITY)  ((PRIORITY) < 0x10U)
+        ^
+Init/init.c(1): warning: In file included from...
+./Init/init.h(4): warning: In file included from...
+./Init/main.h(11): warning: In file included from...
+./Init/misc.h(125): warning: 'IS_NVIC_SUB_PRIORITY' macro redefined [-Wmacro-redefined]
+#define IS_NVIC_SUB_PRIORITY(PRIORITY)  ((PRIORITY) < 0x10)
+        ^
+D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(314): note: previous definition is here
+#define IS_NVIC_SUB_PRIORITY(PRIORITY)         ((PRIORITY) < 0x10U)
+        ^
+Init/init.c(1): warning: In file included from...
+./Init/init.h(4): warning: In file included from...
+./Init/main.h(11): warning: In file included from...
+./Init/misc.h(139): warning: 'IS_SYSTICK_CLK_SOURCE' macro redefined [-Wmacro-redefined]
+#define IS_SYSTICK_CLK_SOURCE(SOURCE) (((SOURCE) == SysTick_CLKSource_HCLK) || \
+        ^
+D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(318): note: previous definition is here
+#define IS_SYSTICK_CLK_SOURCE(SOURCE) (((SOURCE) == SYSTICK_CLKSOURCE_HCLK) || \
+        ^
+Init/init.c(1): warning: In file included from...
+./Init/init.h(4): warning: In file included from...
+./Init/main.h(13): warning: In file included from...
+./Init/stm32f4xx_exti.h(54): warning: 'IS_EXTI_MODE' macro redefined [-Wmacro-redefined]
+#define IS_EXTI_MODE(MODE) (((MODE) == EXTI_Mode_Interrupt) || ((MODE) == EXTI_Mode_Event))
+        ^
+D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_exti.h(251): note: previous definition is here
+#define IS_EXTI_MODE(__LINE__)          ((((__LINE__) & EXTI_MODE_MASK) != 0x00u) && \
+        ^
+Init/init.c(1): warning: In file included from...
+./Init/init.h(4): warning: In file included from...
+./Init/main.h(13): warning: In file included from...
+./Init/stm32f4xx_exti.h(67): warning: 'IS_EXTI_TRIGGER' macro redefined [-Wmacro-redefined]
+#define IS_EXTI_TRIGGER(TRIGGER) (((TRIGGER) == EXTI_Trigger_Rising) || \
+        ^
+D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_exti.h(254): note: previous definition is here
+#define IS_EXTI_TRIGGER(__LINE__)       (((__LINE__)  & ~EXTI_TRIGGER_MASK) == 0x00u)
+        ^
+Init/init.c(1): warning: In file included from...
+./Init/init.h(4): warning: In file included from...
+./Init/main.h(13): warning: In file included from...
+./Init/stm32f4xx_exti.h(123): warning: 'IS_EXTI_LINE' macro redefined [-Wmacro-redefined]
+#define IS_EXTI_LINE(LINE) ((((LINE) & (uint32_t)0xFF800000) == 0x00) && ((LINE) != (uint16_t)0x00))
+        ^
+D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_exti.h(246): note: previous definition is here
+#define IS_EXTI_LINE(__LINE__)          ((((__LINE__) & ~(EXTI_PROPERTY_MASK | EXTI_PIN_MASK)) == 0x00u) && \
+        ^
+7 warnings generated.
+compiling init.c...
+linking...
+Program Size: Code=1296 RO-data=420 RW-data=0 ZI-data=1640  
+".\Objects\ISR_STM.axf" - 0 Error(s), 7 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Classic Version: 1.7.9
+   * Component: Common Version: 1.7.9
+   * Component: Cortex Version: 1.7.9
+   * Component: DMA Version: 1.7.9
+   * Component: EXTI Version: 1.7.9
+   * Component: GPIO Version: 1.7.9
+   * Component: PWR Version: 1.7.9
+   * Component: RCC Version: 1.7.9
+   * Component: TIM Version: 1.7.9
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F401CCUx
+  ./RTE/_STM32F401CCU
+  D:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Device:STM32Cube Framework:1.0.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:STM32Cube Framework:Classic:1.7.9
+      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Source file:   MDK/Templates/Src/main.c
+      Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
+      Include file:  MDK/Templates_LL/Inc/main.h
+      Source file:   MDK/Templates_LL/Src/main.c
+      Source file:   MDK/Templates/Src/stm32f4xx_it.c
+      Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
+      Include file:  MDK/Templates/Inc/main.h
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.7.9
+      Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.7.9
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.7.9
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+
+   * Component: Keil::Device:STM32Cube HAL:EXTI:1.7.9
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.7.9
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.7.9
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.7.9
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+
+   * Component: Keil::Device:STM32Cube HAL:TIM:1.7.9
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xc.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

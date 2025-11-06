@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1736350527 source:d:\kdgit\myshm\prog_c\standard_libraries\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+

@@ -1,0 +1,108 @@
+Dependencies for Project 'ISR_MDR', Target 'K1986BE92QI': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (.\Main.c)(0x68348B07)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../MDR -I ./Init-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o ./objects/main.o -MD)
+I (Init\Init.h)(0x68348AD7)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h)(0x676AC366)
+I (RTE\Device\MDR32F9Q2I\MDR32FxQI_config.h)(0x676AC366)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (RTE\_K1986BE92QI\RTE_Components.h)(0x683483F0)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (RTE\Device\MDR32F9Q2I\system_MDR32F9Q2I.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_port.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_rst_clk.h)(0x676AC366)
+I (Init\port.h)(0x683486A7)
+I (Init\clk.h)(0x6831908E)
+F (.\Init\Init.c)(0x68348BCC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../MDR -I ./Init-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o ./objects/init.o -MD)
+I (Init\Init.h)(0x68348AD7)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h)(0x676AC366)
+I (RTE\Device\MDR32F9Q2I\MDR32FxQI_config.h)(0x676AC366)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (RTE\_K1986BE92QI\RTE_Components.h)(0x683483F0)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (RTE\Device\MDR32F9Q2I\system_MDR32F9Q2I.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_port.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_rst_clk.h)(0x676AC366)
+I (Init\port.h)(0x683486A7)
+I (Init\clk.h)(0x6831908E)
+F (.\Init\Init.h)(0x68348AD7)()
+F (.\Init\port.c)(0x684F17E4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../MDR -I ./Init-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o ./objects/port.o -MD)
+I (Init\port.h)(0x683486A7)
+I (Init\Init.h)(0x68348AD7)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h)(0x676AC366)
+I (RTE\Device\MDR32F9Q2I\MDR32FxQI_config.h)(0x676AC366)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (RTE\_K1986BE92QI\RTE_Components.h)(0x683483F0)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (RTE\Device\MDR32F9Q2I\system_MDR32F9Q2I.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_port.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_rst_clk.h)(0x676AC366)
+I (Init\clk.h)(0x6831908E)
+F (.\Init\port.h)(0x683486A7)()
+F (.\Init\clk.c)(0x68ADFCEF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../MDR -I ./Init-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o ./objects/clk.o -MD)
+I (Init\clk.h)(0x6831908E)
+I (Init\Init.h)(0x68348AD7)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h)(0x676AC366)
+I (RTE\Device\MDR32F9Q2I\MDR32FxQI_config.h)(0x676AC366)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (RTE\_K1986BE92QI\RTE_Components.h)(0x683483F0)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (RTE\Device\MDR32F9Q2I\system_MDR32F9Q2I.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_port.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_rst_clk.h)(0x676AC366)
+I (Init\port.h)(0x683486A7)
+F (.\Init\clk.h)(0x6831908E)()
+F (RTE/Device/MDR32F9Q2I/MDR32F9Q2I.sct)(0x676AC364)()
+F (RTE/Device/MDR32F9Q2I/MDR32FxQI_config.h)(0x676AC366)()
+F (RTE/Device/MDR32F9Q2I/startup_MDR32F9Q2I.S)(0x676AC366)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION=538 -D_RTE_ -D_RTE_-o ./objects/startup_mdr32f9q2i.o)
+F (RTE/Device/MDR32F9Q2I/system_MDR32F9Q2I.c)(0x676AC366)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../MDR -I ./Init-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o ./objects/system_mdr32f9q2i.o -MD)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h)(0x676AC366)
+I (RTE\Device\MDR32F9Q2I\MDR32FxQI_config.h)(0x676AC366)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (RTE\_K1986BE92QI\RTE_Components.h)(0x683483F0)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (RTE\Device\MDR32F9Q2I\system_MDR32F9Q2I.h)(0x676AC366)
+F (RTE/Device/MDR32F9Q2I/system_MDR32F9Q2I.h)(0x676AC366)()
+F (D:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/src/MDR32FxQI_port.c)(0x676AC366)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../MDR -I ./Init-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o ./objects/mdr32fxqi_port.o -MD)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_port.h)(0x676AC366)
+I (RTE\Device\MDR32F9Q2I\MDR32FxQI_config.h)(0x676AC366)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (RTE\_K1986BE92QI\RTE_Components.h)(0x683483F0)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (RTE\Device\MDR32F9Q2I\system_MDR32F9Q2I.h)(0x676AC366)
+F (D:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/src/MDR32FxQI_rst_clk.c)(0x676AC366)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../MDR -I ./Init-I./RTE/Device/MDR32F9Q2I-I./RTE/_K1986BE92QI-ID:/Keil_v5/ARM/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/CoreSupport/CM3-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/CMSIS/MDR32FxQI/DeviceSupport/MDR32F9Q2I/inc-ID:/Keil_v5/ARM/Packs/Milandr/MDR32FxQI/1.3.0/Libraries/SPL/MDR32FxQI/inc-D__UVISION_VERSION="538" -D_RTE_ -D_RTE_-o ./objects/mdr32fxqi_rst_clk.o -MD)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_rst_clk.h)(0x676AC366)
+I (RTE\Device\MDR32F9Q2I\MDR32FxQI_config.h)(0x676AC366)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (RTE\_K1986BE92QI\RTE_Components.h)(0x683483F0)
+I (D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\MDR32F9Q2I\inc\MDR32F9Q2I.h)(0x676AC366)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (RTE\Device\MDR32F9Q2I\system_MDR32F9Q2I.h)(0x676AC366)
