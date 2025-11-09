@@ -288,7 +288,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "EP-528_ser.2.kicad_pro",
+    "filename": "6Ю6.679.629-01.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -434,16 +434,8 @@
   },
   "sheets": [
     [
-      "eb18e8eb-1ed7-4a5a-9fb6-c3b75cce2460",
+      "dfd6d667-c841-4829-9706-3b6b0806bff5",
       "Корневой лист"
-    ],
-    [
-      "00000000-0000-0000-0000-000067d84fbc",
-      "upr"
-    ],
-    [
-      "00000000-0000-0000-0000-000068537227",
-      "Pit"
     ]
   ],
   "text_variables": {}
