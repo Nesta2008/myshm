@@ -4,43 +4,25 @@ Component: Arm Compiler for Embedded 6.19 Tool: armlink [5e73cb00]
 
 Section Cross References
 
-    main.o(.text.main) refers to init.o(.text.STick_init) for STick_init
+    main.o(.text.main) refers to systick.o(.text.STick_init) for STick_init
     main.o(.text.main) refers to init.o(.text.PORT_UserInit) for PORT_UserInit
-    main.o(.text.main) refers to tmr.o(.text.TIM_Init) for TIM_Init
-    main.o(.text.main) refers to init.o(.text.delay) for delay
-    main.o(.text.main) refers to mdr32fxqi_port.o(.text.PORT_ResetBits) for PORT_ResetBits
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
-    init.o(.text.PORTA_LED) refers to clc.o(.text.CLK_PORTA) for CLK_PORTA
-    init.o(.text.PORTA_LED) refers to mdr32fxqi_port.o(.text.PORT_Init) for PORT_Init
-    init.o(.ARM.exidx.text.PORTA_LED) refers to init.o(.text.PORTA_LED) for [Anonymous Symbol]
-    init.o(.text.PORTС_LED) refers to clc.o(.text.CLK_PORTC) for CLK_PORTC
-    init.o(.text.PORTС_LED) refers to mdr32fxqi_port.o(.text.PORT_Init) for PORT_Init
-    init.o(.ARM.exidx.text.PORTС_LED) refers to init.o(.text.PORTС_LED) for [Anonymous Symbol]
-    init.o(.text.PORTA_Button) refers to mdr32fxqi_port.o(.text.PORT_Init) for PORT_Init
-    init.o(.ARM.exidx.text.PORTA_Button) refers to init.o(.text.PORTA_Button) for [Anonymous Symbol]
-    init.o(.ARM.exidx.text.STick_init) refers to init.o(.text.STick_init) for [Anonymous Symbol]
-    init.o(.text.SysTick_Handler) refers to init.o(.bss.delay_cnt) for delay_cnt
-    init.o(.ARM.exidx.text.SysTick_Handler) refers to init.o(.text.SysTick_Handler) for [Anonymous Symbol]
     init.o(.text.delay) refers to init.o(.bss.delay_cnt) for delay_cnt
     init.o(.ARM.exidx.text.delay) refers to init.o(.text.delay) for [Anonymous Symbol]
     init.o(.text.EXT_INT1_IRQHandler) refers to mdr32fxqi_port.o(.text.PORT_ReadInputDataBit) for PORT_ReadInputDataBit
     init.o(.text.EXT_INT1_IRQHandler) refers to init.o(.bss.buttonFlag) for buttonFlag
     init.o(.ARM.exidx.text.EXT_INT1_IRQHandler) refers to init.o(.text.EXT_INT1_IRQHandler) for [Anonymous Symbol]
-    init.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_timer.o(.text.TIMER_GetITStatus) for TIMER_GetITStatus
-    init.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_port.o(.text.PORT_SetBits) for PORT_SetBits
-    init.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_timer.o(.text.TIMER_ClearFlag) for TIMER_ClearFlag
-    init.o(.ARM.exidx.text.Timer1_IRQHandler) refers to init.o(.text.Timer1_IRQHandler) for [Anonymous Symbol]
-    init.o(.text.PORT_UserInit) refers to clc.o(.text.CLK_PORTA) for CLK_PORTA
-    init.o(.text.PORT_UserInit) refers to mdr32fxqi_port.o(.text.PORT_Init) for PORT_Init
+    init.o(.text.PORT_UserInit) refers to clc.o(.text.CPU_Init) for CPU_Init
+    init.o(.text.PORT_UserInit) refers to port.o(.text.PORTA_LED) for PORTA_LED
+    init.o(.text.PORT_UserInit) refers to port.o(.text.PORTС_LED) for PORTС_LED
+    init.o(.text.PORT_UserInit) refers to tmr.o(.text.TIM_Init_CMSIS) for TIM_Init_CMSIS
     init.o(.ARM.exidx.text.PORT_UserInit) refers to init.o(.text.PORT_UserInit) for [Anonymous Symbol]
     clc.o(.ARM.exidx.text.СPU_Reset) refers to clc.o(.text.СPU_Reset) for [Anonymous Symbol]
     clc.o(.text.CPU_Init) refers to system_k1986ve9xi.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
     clc.o(.ARM.exidx.text.CPU_Init) refers to clc.o(.text.CPU_Init) for [Anonymous Symbol]
-    clc.o(.ARM.exidx.text.CLK_PORTA) refers to clc.o(.text.CLK_PORTA) for [Anonymous Symbol]
-    clc.o(.text.CLK_PORTC) refers to mdr32fxqi_rst_clk.o(.text.RST_CLK_PCLKcmd) for RST_CLK_PCLKcmd
-    clc.o(.ARM.exidx.text.CLK_PORTC) refers to clc.o(.text.CLK_PORTC) for [Anonymous Symbol]
     clc.o(.text.CLK_TIMER1) refers to mdr32fxqi_rst_clk.o(.text.RST_CLK_PCLKcmd) for RST_CLK_PCLKcmd
     clc.o(.ARM.exidx.text.CLK_TIMER1) refers to clc.o(.text.CLK_TIMER1) for [Anonymous Symbol]
+    tmr.o(.ARM.exidx.text.TIMER_Reset) refers to tmr.o(.text.TIMER_Reset) for [Anonymous Symbol]
     tmr.o(.text.TIM_Init) refers to clc.o(.text.CLK_TIMER1) for CLK_TIMER1
     tmr.o(.text.TIM_Init) refers to mdr32fxqi_timer.o(.text.TIMER_CntInit) for TIMER_CntInit
     tmr.o(.text.TIM_Init) refers to mdr32fxqi_timer.o(.text.TIMER_BRGInit) for TIMER_BRGInit
@@ -48,14 +30,35 @@ Section Cross References
     tmr.o(.text.TIM_Init) refers to mdr32fxqi_timer.o(.text.TIMER_Cmd) for TIMER_Cmd
     tmr.o(.ARM.exidx.text.TIM_Init) refers to tmr.o(.text.TIM_Init) for [Anonymous Symbol]
     tmr.o(.text.TIM_Init_CMSIS) refers to clc.o(.text.CLK_TIMER1) for CLK_TIMER1
+    tmr.o(.text.TIM_Init_CMSIS) refers to mdr32fxqi_timer.o(.text.TIMER_BRGInit) for TIMER_BRGInit
     tmr.o(.ARM.exidx.text.TIM_Init_CMSIS) refers to tmr.o(.text.TIM_Init_CMSIS) for [Anonymous Symbol]
+    tmr.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_timer.o(.text.TIMER_GetITStatus) for TIMER_GetITStatus
+    tmr.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_port.o(.text.PORT_ReadInputDataBit) for PORT_ReadInputDataBit
+    tmr.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_port.o(.text.PORT_ResetBits) for PORT_ResetBits
+    tmr.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_port.o(.text.PORT_SetBits) for PORT_SetBits
+    tmr.o(.text.Timer1_IRQHandler) refers to mdr32fxqi_timer.o(.text.TIMER_ClearFlag) for TIMER_ClearFlag
+    tmr.o(.ARM.exidx.text.Timer1_IRQHandler) refers to tmr.o(.text.Timer1_IRQHandler) for [Anonymous Symbol]
+    port.o(.text.PORTA_LED) refers to mdr32fxqi_port.o(.text.PORT_Init) for PORT_Init
+    port.o(.ARM.exidx.text.PORTA_LED) refers to port.o(.text.PORTA_LED) for [Anonymous Symbol]
+    port.o(.text.PORTС_LED) refers to mdr32fxqi_rst_clk.o(.text.RST_CLK_PCLKcmd) for RST_CLK_PCLKcmd
+    port.o(.text.PORTС_LED) refers to mdr32fxqi_port.o(.text.PORT_Init) for PORT_Init
+    port.o(.ARM.exidx.text.PORTС_LED) refers to port.o(.text.PORTС_LED) for [Anonymous Symbol]
+    port.o(.text.PORTA_Button) refers to mdr32fxqi_port.o(.text.PORT_Init) for PORT_Init
+    port.o(.ARM.exidx.text.PORTA_Button) refers to port.o(.text.PORTA_Button) for [Anonymous Symbol]
+    systick.o(.ARM.exidx.text.STick_init) refers to systick.o(.text.STick_init) for [Anonymous Symbol]
+    systick.o(.text.SysTick_Handler) refers to init.o(.bss.delay_cnt) for delay_cnt
+    systick.o(.ARM.exidx.text.SysTick_Handler) refers to systick.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    pwm.o(.text.TIM1_PWM) refers to clc.o(.text.CLK_TIMER1) for CLK_TIMER1
+    pwm.o(.text.TIM1_PWM) refers to tmr.o(.text.TIMER_Reset) for TIMER_Reset
+    pwm.o(.text.TIM1_PWM) refers to system_k1986ve9xi.o(.data.SystemCoreClock) for SystemCoreClock
+    pwm.o(.ARM.exidx.text.TIM1_PWM) refers to pwm.o(.text.TIM1_PWM) for [Anonymous Symbol]
     startup_k1986ve9xi.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_k1986ve9xi.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_k1986ve9xi.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_k1986ve9xi.o(RESET) refers to startup_k1986ve9xi.o(STACK) for __initial_sp
     startup_k1986ve9xi.o(RESET) refers to startup_k1986ve9xi.o(.text) for Reset_Handler
-    startup_k1986ve9xi.o(RESET) refers to init.o(.text.SysTick_Handler) for SysTick_Handler
-    startup_k1986ve9xi.o(RESET) refers to init.o(.text.Timer1_IRQHandler) for Timer1_IRQHandler
+    startup_k1986ve9xi.o(RESET) refers to systick.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_k1986ve9xi.o(RESET) refers to tmr.o(.text.Timer1_IRQHandler) for Timer1_IRQHandler
     startup_k1986ve9xi.o(RESET) refers to init.o(.text.EXT_INT1_IRQHandler) for EXT_INT1_IRQHandler
     startup_k1986ve9xi.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_k1986ve9xi.o(.text) refers to system_k1986ve9xi.o(.text.SystemInit) for SystemInit
@@ -287,33 +290,34 @@ Removing Unused input sections from the image.
     Removing main.o(.ARM.exidx.text.main), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
     Removing init.o(.text), (0 bytes).
-    Removing init.o(.text.PORTA_LED), (50 bytes).
-    Removing init.o(.ARM.exidx.text.PORTA_LED), (8 bytes).
-    Removing init.o(.text.PORTС_LED), (50 bytes).
-    Removing init.o(.ARM.exidx.text.PORTС_LED), (8 bytes).
-    Removing init.o(.text.PORTA_Button), (60 bytes).
-    Removing init.o(.ARM.exidx.text.PORTA_Button), (8 bytes).
-    Removing init.o(.ARM.exidx.text.STick_init), (8 bytes).
-    Removing init.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing init.o(.text.delay), (20 bytes).
     Removing init.o(.ARM.exidx.text.delay), (8 bytes).
     Removing init.o(.ARM.exidx.text.EXT_INT1_IRQHandler), (8 bytes).
-    Removing init.o(.ARM.exidx.text.Timer1_IRQHandler), (8 bytes).
     Removing init.o(.ARM.exidx.text.PORT_UserInit), (8 bytes).
     Removing clc.o(.text), (0 bytes).
     Removing clc.o(.text.СPU_Reset), (50 bytes).
     Removing clc.o(.ARM.exidx.text.СPU_Reset), (8 bytes).
-    Removing clc.o(.text.CPU_Init), (100 bytes).
     Removing clc.o(.ARM.exidx.text.CPU_Init), (8 bytes).
-    Removing clc.o(.ARM.exidx.text.CLK_PORTA), (8 bytes).
-    Removing clc.o(.text.CLK_PORTC), (10 bytes).
-    Removing clc.o(.ARM.exidx.text.CLK_PORTC), (8 bytes).
     Removing clc.o(.ARM.exidx.text.CLK_TIMER1), (8 bytes).
     Removing tmr.o(.text), (0 bytes).
+    Removing tmr.o(.text.TIMER_Reset), (68 bytes).
+    Removing tmr.o(.ARM.exidx.text.TIMER_Reset), (8 bytes).
+    Removing tmr.o(.text.TIM_Init), (172 bytes).
     Removing tmr.o(.ARM.exidx.text.TIM_Init), (8 bytes).
-    Removing tmr.o(.text.TIM_Init_CMSIS), (70 bytes).
     Removing tmr.o(.ARM.exidx.text.TIM_Init_CMSIS), (8 bytes).
+    Removing tmr.o(.ARM.exidx.text.Timer1_IRQHandler), (8 bytes).
+    Removing port.o(.text), (0 bytes).
+    Removing port.o(.ARM.exidx.text.PORTA_LED), (8 bytes).
+    Removing port.o(.ARM.exidx.text.PORTС_LED), (8 bytes).
+    Removing port.o(.text.PORTA_Button), (60 bytes).
+    Removing port.o(.ARM.exidx.text.PORTA_Button), (8 bytes).
+    Removing systick.o(.text), (0 bytes).
+    Removing systick.o(.ARM.exidx.text.STick_init), (8 bytes).
+    Removing systick.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing pwm.o(.text), (0 bytes).
+    Removing pwm.o(.text.TIM1_PWM), (72 bytes).
+    Removing pwm.o(.ARM.exidx.text.TIM1_PWM), (8 bytes).
     Removing system_k1986ve9xi.o(.text), (0 bytes).
-    Removing system_k1986ve9xi.o(.text.SystemCoreClockUpdate), (110 bytes).
     Removing system_k1986ve9xi.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
     Removing system_k1986ve9xi.o(.ARM.exidx.text.SystemInit), (8 bytes).
     Removing mdr32fxqi_port.o(.text), (0 bytes).
@@ -404,9 +408,11 @@ Removing Unused input sections from the image.
     Removing mdr32fxqi_timer.o(.text), (0 bytes).
     Removing mdr32fxqi_timer.o(.text.TIMER_DeInit), (68 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_DeInit), (8 bytes).
+    Removing mdr32fxqi_timer.o(.text.TIMER_CntInit), (60 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_CntInit), (8 bytes).
     Removing mdr32fxqi_timer.o(.text.TIMER_CntStructInit), (16 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_CntStructInit), (8 bytes).
+    Removing mdr32fxqi_timer.o(.text.TIMER_Cmd), (16 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_Cmd), (8 bytes).
     Removing mdr32fxqi_timer.o(.text.TIMER_SetCounter), (4 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_SetCounter), (8 bytes).
@@ -513,11 +519,12 @@ Removing Unused input sections from the image.
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_ClearFlag), (8 bytes).
     Removing mdr32fxqi_timer.o(.text.TIMER_DMACmd), (20 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_DMACmd), (8 bytes).
+    Removing mdr32fxqi_timer.o(.text.TIMER_ITConfig), (20 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_ITConfig), (8 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_GetITStatus), (8 bytes).
     Removing mdr32fxqi_timer.o(.ARM.exidx.text.TIMER_BRGInit), (8 bytes).
 
-233 unused section(s) (total 4104 bytes) removed from the image.
+237 unused section(s) (total 4142 bytes) removed from the image.
 
 ==============================================================================
 
@@ -582,7 +589,10 @@ Image Symbol Table
     MDR32FxQI_port.c                         0x00000000   Number         0  mdr32fxqi_port.o ABSOLUTE
     MDR32FxQI_rst_clk.c                      0x00000000   Number         0  mdr32fxqi_rst_clk.o ABSOLUTE
     MDR32FxQI_timer.c                        0x00000000   Number         0  mdr32fxqi_timer.o ABSOLUTE
+    PWM.c                                    0x00000000   Number         0  pwm.o ABSOLUTE
+    Port.c                                   0x00000000   Number         0  port.o ABSOLUTE
     RTE\Device\K1986VE92xI\startup_K1986VE9xI.S 0x00000000   Number         0  startup_k1986ve9xi.o ABSOLUTE
+    SysTick.c                                0x00000000   Number         0  systick.o ABSOLUTE
     clc.c                                    0x00000000   Number         0  clc.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     init.c                                   0x00000000   Number         0  init.o ABSOLUTE
@@ -644,28 +654,27 @@ Image Symbol Table
     .text                                    0x08000230   Section        0  sys_exit.o(.text)
     .text                                    0x0800023c   Section        2  use_no_semi.o(.text)
     .text                                    0x0800023e   Section        0  indicate_semi.o(.text)
-    [Anonymous Symbol]                       0x08000240   Section        0  clc.o(.text.CLK_PORTA)
-    [Anonymous Symbol]                       0x08000250   Section        0  clc.o(.text.CLK_TIMER1)
-    [Anonymous Symbol]                       0x0800025c   Section        0  init.o(.text.EXT_INT1_IRQHandler)
-    [Anonymous Symbol]                       0x08000280   Section        0  mdr32fxqi_port.o(.text.PORT_Init)
-    [Anonymous Symbol]                       0x080003dc   Section        0  mdr32fxqi_port.o(.text.PORT_ReadInputDataBit)
-    [Anonymous Symbol]                       0x080003e8   Section        0  mdr32fxqi_port.o(.text.PORT_ResetBits)
-    [Anonymous Symbol]                       0x08000400   Section        0  mdr32fxqi_port.o(.text.PORT_SetBits)
-    [Anonymous Symbol]                       0x08000418   Section        0  init.o(.text.PORT_UserInit)
-    [Anonymous Symbol]                       0x0800044c   Section        0  mdr32fxqi_rst_clk.o(.text.RST_CLK_PCLKcmd)
-    [Anonymous Symbol]                       0x08000464   Section        0  init.o(.text.STick_init)
-    [Anonymous Symbol]                       0x080004a0   Section        0  init.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x080004b8   Section        0  system_k1986ve9xi.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x080005f0   Section        0  mdr32fxqi_timer.o(.text.TIMER_BRGInit)
-    [Anonymous Symbol]                       0x0800065c   Section        0  mdr32fxqi_timer.o(.text.TIMER_ClearFlag)
-    [Anonymous Symbol]                       0x08000664   Section        0  mdr32fxqi_timer.o(.text.TIMER_Cmd)
-    [Anonymous Symbol]                       0x08000674   Section        0  mdr32fxqi_timer.o(.text.TIMER_CntInit)
-    [Anonymous Symbol]                       0x080006b0   Section        0  mdr32fxqi_timer.o(.text.TIMER_GetITStatus)
-    [Anonymous Symbol]                       0x080006c0   Section        0  mdr32fxqi_timer.o(.text.TIMER_ITConfig)
-    [Anonymous Symbol]                       0x080006d4   Section        0  tmr.o(.text.TIM_Init)
-    [Anonymous Symbol]                       0x08000740   Section        0  init.o(.text.Timer1_IRQHandler)
-    [Anonymous Symbol]                       0x08000768   Section        0  init.o(.text.delay)
-    [Anonymous Symbol]                       0x0800077c   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x08000240   Section        0  clc.o(.text.CLK_TIMER1)
+    [Anonymous Symbol]                       0x0800024c   Section        0  clc.o(.text.CPU_Init)
+    [Anonymous Symbol]                       0x080002b0   Section        0  init.o(.text.EXT_INT1_IRQHandler)
+    [Anonymous Symbol]                       0x080002d4   Section        0  port.o(.text.PORTA_LED)
+    [Anonymous Symbol]                       0x08000310   Section        0  mdr32fxqi_port.o(.text.PORT_Init)
+    [Anonymous Symbol]                       0x0800046c   Section        0  mdr32fxqi_port.o(.text.PORT_ReadInputDataBit)
+    [Anonymous Symbol]                       0x08000478   Section        0  mdr32fxqi_port.o(.text.PORT_ResetBits)
+    [Anonymous Symbol]                       0x08000490   Section        0  mdr32fxqi_port.o(.text.PORT_SetBits)
+    [Anonymous Symbol]                       0x080004a8   Section        0  init.o(.text.PORT_UserInit)
+    [Anonymous Symbol]                       0x080004c0   Section        0  port.o(.text.PORTС_LED)
+    [Anonymous Symbol]                       0x080004f8   Section        0  mdr32fxqi_rst_clk.o(.text.RST_CLK_PCLKcmd)
+    [Anonymous Symbol]                       0x08000510   Section        0  systick.o(.text.STick_init)
+    [Anonymous Symbol]                       0x0800054c   Section        0  systick.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x08000564   Section        0  system_k1986ve9xi.o(.text.SystemCoreClockUpdate)
+    [Anonymous Symbol]                       0x080005d4   Section        0  system_k1986ve9xi.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x0800070c   Section        0  mdr32fxqi_timer.o(.text.TIMER_BRGInit)
+    [Anonymous Symbol]                       0x08000778   Section        0  mdr32fxqi_timer.o(.text.TIMER_ClearFlag)
+    [Anonymous Symbol]                       0x08000780   Section        0  mdr32fxqi_timer.o(.text.TIMER_GetITStatus)
+    [Anonymous Symbol]                       0x08000790   Section        0  tmr.o(.text.TIM_Init_CMSIS)
+    [Anonymous Symbol]                       0x0800081c   Section        0  tmr.o(.text.Timer1_IRQHandler)
+    [Anonymous Symbol]                       0x08000874   Section        0  main.o(.text.main)
     .bss                                     0x20000008   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000070   Data         512  startup_k1986ve9xi.o(HEAP)
     HEAP                                     0x20000070   Section      512  startup_k1986ve9xi.o(HEAP)
@@ -801,31 +810,30 @@ Image Symbol Table
     __I$use$semihosting                      0x0800023d   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x0800023d   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x0800023f   Thumb Code     0  indicate_semi.o(.text)
-    CLK_PORTA                                0x08000241   Thumb Code    16  clc.o(.text.CLK_PORTA)
-    CLK_TIMER1                               0x08000251   Thumb Code    10  clc.o(.text.CLK_TIMER1)
-    EXT_INT1_IRQHandler                      0x0800025d   Thumb Code    34  init.o(.text.EXT_INT1_IRQHandler)
-    PORT_Init                                0x08000281   Thumb Code   348  mdr32fxqi_port.o(.text.PORT_Init)
-    PORT_ReadInputDataBit                    0x080003dd   Thumb Code    10  mdr32fxqi_port.o(.text.PORT_ReadInputDataBit)
-    PORT_ResetBits                           0x080003e9   Thumb Code    24  mdr32fxqi_port.o(.text.PORT_ResetBits)
-    PORT_SetBits                             0x08000401   Thumb Code    22  mdr32fxqi_port.o(.text.PORT_SetBits)
-    PORT_UserInit                            0x08000419   Thumb Code    50  init.o(.text.PORT_UserInit)
-    RST_CLK_PCLKcmd                          0x0800044d   Thumb Code    24  mdr32fxqi_rst_clk.o(.text.RST_CLK_PCLKcmd)
-    STick_init                               0x08000465   Thumb Code    60  init.o(.text.STick_init)
-    SysTick_Handler                          0x080004a1   Thumb Code    24  init.o(.text.SysTick_Handler)
-    SystemInit                               0x080004b9   Thumb Code   310  system_k1986ve9xi.o(.text.SystemInit)
-    TIMER_BRGInit                            0x080005f1   Thumb Code   106  mdr32fxqi_timer.o(.text.TIMER_BRGInit)
-    TIMER_ClearFlag                          0x0800065d   Thumb Code     6  mdr32fxqi_timer.o(.text.TIMER_ClearFlag)
-    TIMER_Cmd                                0x08000665   Thumb Code    16  mdr32fxqi_timer.o(.text.TIMER_Cmd)
-    TIMER_CntInit                            0x08000675   Thumb Code    60  mdr32fxqi_timer.o(.text.TIMER_CntInit)
-    TIMER_GetITStatus                        0x080006b1   Thumb Code    14  mdr32fxqi_timer.o(.text.TIMER_GetITStatus)
-    TIMER_ITConfig                           0x080006c1   Thumb Code    20  mdr32fxqi_timer.o(.text.TIMER_ITConfig)
-    TIM_Init                                 0x080006d5   Thumb Code   108  tmr.o(.text.TIM_Init)
-    Timer1_IRQHandler                        0x08000741   Thumb Code    40  init.o(.text.Timer1_IRQHandler)
-    delay                                    0x08000769   Thumb Code    20  init.o(.text.delay)
-    main                                     0x0800077d   Thumb Code    46  main.o(.text.main)
-    EEPROM_FACTORY_READ_WORD_FUNC            0x080007ac   Data          64  system_k1986ve9xi.o(.rodata.EEPROM_FACTORY_READ_WORD_FUNC)
-    Region$$Table$$Base                      0x080007ec   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800080c   Number         0  anon$$obj.o(Region$$Table)
+    CLK_TIMER1                               0x08000241   Thumb Code    10  clc.o(.text.CLK_TIMER1)
+    CPU_Init                                 0x0800024d   Thumb Code   100  clc.o(.text.CPU_Init)
+    EXT_INT1_IRQHandler                      0x080002b1   Thumb Code    34  init.o(.text.EXT_INT1_IRQHandler)
+    PORTA_LED                                0x080002d5   Thumb Code    60  port.o(.text.PORTA_LED)
+    PORT_Init                                0x08000311   Thumb Code   348  mdr32fxqi_port.o(.text.PORT_Init)
+    PORT_ReadInputDataBit                    0x0800046d   Thumb Code    10  mdr32fxqi_port.o(.text.PORT_ReadInputDataBit)
+    PORT_ResetBits                           0x08000479   Thumb Code    24  mdr32fxqi_port.o(.text.PORT_ResetBits)
+    PORT_SetBits                             0x08000491   Thumb Code    22  mdr32fxqi_port.o(.text.PORT_SetBits)
+    PORT_UserInit                            0x080004a9   Thumb Code    22  init.o(.text.PORT_UserInit)
+    PORTС_LED                               0x080004c1   Thumb Code    56  port.o(.text.PORTС_LED)
+    RST_CLK_PCLKcmd                          0x080004f9   Thumb Code    24  mdr32fxqi_rst_clk.o(.text.RST_CLK_PCLKcmd)
+    STick_init                               0x08000511   Thumb Code    60  systick.o(.text.STick_init)
+    SysTick_Handler                          0x0800054d   Thumb Code    24  systick.o(.text.SysTick_Handler)
+    SystemCoreClockUpdate                    0x08000565   Thumb Code   110  system_k1986ve9xi.o(.text.SystemCoreClockUpdate)
+    SystemInit                               0x080005d5   Thumb Code   310  system_k1986ve9xi.o(.text.SystemInit)
+    TIMER_BRGInit                            0x0800070d   Thumb Code   106  mdr32fxqi_timer.o(.text.TIMER_BRGInit)
+    TIMER_ClearFlag                          0x08000779   Thumb Code     6  mdr32fxqi_timer.o(.text.TIMER_ClearFlag)
+    TIMER_GetITStatus                        0x08000781   Thumb Code    14  mdr32fxqi_timer.o(.text.TIMER_GetITStatus)
+    TIM_Init_CMSIS                           0x08000791   Thumb Code   140  tmr.o(.text.TIM_Init_CMSIS)
+    Timer1_IRQHandler                        0x0800081d   Thumb Code    86  tmr.o(.text.Timer1_IRQHandler)
+    main                                     0x08000875   Thumb Code    10  main.o(.text.main)
+    EEPROM_FACTORY_READ_WORD_FUNC            0x08000880   Data          64  system_k1986ve9xi.o(.rodata.EEPROM_FACTORY_READ_WORD_FUNC)
+    Region$$Table$$Base                      0x080008c0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080008e0   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_k1986ve9xi.o(.data.SystemCoreClock)
     __libspace_start                         0x20000008   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000068   Data           0  libspace.o(.bss)
@@ -840,118 +848,119 @@ Memory Map of the image
 
   Image Entry point : 0x080000c1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000818, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000008e8, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000080c, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000008e0, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000000c0   Data   RO           68    RESET               startup_k1986ve9xi.o
-    0x080000c0   0x080000c0   0x00000008   Code   RO          325  * !!!main             c_w.l(__main.o)
-    0x080000c8   0x080000c8   0x00000034   Code   RO          490    !!!scatter          c_w.l(__scatter.o)
-    0x080000fc   0x080000fc   0x0000001a   Code   RO          492    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000000   0x08000000   0x000000c0   Data   RO           88    RESET               startup_k1986ve9xi.o
+    0x080000c0   0x080000c0   0x00000008   Code   RO          345  * !!!main             c_w.l(__main.o)
+    0x080000c8   0x080000c8   0x00000034   Code   RO          510    !!!scatter          c_w.l(__scatter.o)
+    0x080000fc   0x080000fc   0x0000001a   Code   RO          512    !!handler_copy      c_w.l(__scatter_copy.o)
     0x08000116   0x08000116   0x00000002   PAD
-    0x08000118   0x08000118   0x0000001c   Code   RO          494    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x08000134   0x08000134   0x00000002   Code   RO          352    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          359    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          361    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          363    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          366    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          368    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          370    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          373    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          375    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          377    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          379    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          381    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          383    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          385    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          387    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          389    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          391    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          393    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          397    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          399    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          401    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000000   Code   RO          403    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x08000136   0x08000136   0x00000002   Code   RO          404    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x08000138   0x08000138   0x00000002   Code   RO          426    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x0800013a   0x0800013a   0x00000000   Code   RO          441    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x0800013a   0x0800013a   0x00000000   Code   RO          443    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x0800013a   0x0800013a   0x00000000   Code   RO          446    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x0800013a   0x0800013a   0x00000000   Code   RO          449    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x0800013a   0x0800013a   0x00000000   Code   RO          451    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x0800013a   0x0800013a   0x00000000   Code   RO          454    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x0800013a   0x0800013a   0x00000002   Code   RO          455    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x0800013c   0x0800013c   0x00000000   Code   RO          327    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x0800013c   0x0800013c   0x00000000   Code   RO          329    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x0800013c   0x0800013c   0x00000006   Code   RO          341    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x08000142   0x08000142   0x00000000   Code   RO          331    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x08000142   0x08000142   0x00000004   Code   RO          332    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x08000146   0x08000146   0x00000000   Code   RO          334    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x08000146   0x08000146   0x00000008   Code   RO          335    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x0800014e   0x0800014e   0x00000002   Code   RO          356    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x08000150   0x08000150   0x00000000   Code   RO          406    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x08000150   0x08000150   0x00000004   Code   RO          407    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08000154   0x08000154   0x00000006   Code   RO          408    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000118   0x08000118   0x0000001c   Code   RO          514    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000134   0x08000134   0x00000002   Code   RO          372    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          379    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          381    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          383    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          386    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          388    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          390    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          393    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          395    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          397    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          399    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          401    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          403    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          405    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          407    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          409    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          411    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          413    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          417    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          419    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          421    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000000   Code   RO          423    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x08000136   0x08000136   0x00000002   Code   RO          424    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x08000138   0x08000138   0x00000002   Code   RO          446    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO          461    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO          463    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO          466    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO          469    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO          471    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000000   Code   RO          474    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x0800013a   0x0800013a   0x00000002   Code   RO          475    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x0800013c   0x0800013c   0x00000000   Code   RO          347    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x0800013c   0x0800013c   0x00000000   Code   RO          349    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x0800013c   0x0800013c   0x00000006   Code   RO          361    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x08000142   0x08000142   0x00000000   Code   RO          351    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000142   0x08000142   0x00000004   Code   RO          352    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000146   0x08000146   0x00000000   Code   RO          354    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000146   0x08000146   0x00000008   Code   RO          355    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800014e   0x0800014e   0x00000002   Code   RO          376    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000150   0x08000150   0x00000000   Code   RO          426    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000150   0x08000150   0x00000004   Code   RO          427    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000154   0x08000154   0x00000006   Code   RO          428    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0800015a   0x0800015a   0x00000002   PAD
-    0x0800015c   0x0800015c   0x00000068   Code   RO           69    .text               startup_k1986ve9xi.o
-    0x080001c4   0x080001c4   0x00000006   Code   RO          323    .text               c_w.l(heapauxi.o)
-    0x080001ca   0x080001ca   0x0000004a   Code   RO          343    .text               c_w.l(sys_stackheap_outer.o)
-    0x08000214   0x08000214   0x00000012   Code   RO          345    .text               c_w.l(exit.o)
+    0x0800015c   0x0800015c   0x00000068   Code   RO           89    .text               startup_k1986ve9xi.o
+    0x080001c4   0x080001c4   0x00000006   Code   RO          343    .text               c_w.l(heapauxi.o)
+    0x080001ca   0x080001ca   0x0000004a   Code   RO          363    .text               c_w.l(sys_stackheap_outer.o)
+    0x08000214   0x08000214   0x00000012   Code   RO          365    .text               c_w.l(exit.o)
     0x08000226   0x08000226   0x00000002   PAD
-    0x08000228   0x08000228   0x00000008   Code   RO          353    .text               c_w.l(libspace.o)
-    0x08000230   0x08000230   0x0000000c   Code   RO          416    .text               c_w.l(sys_exit.o)
-    0x0800023c   0x0800023c   0x00000002   Code   RO          431    .text               c_w.l(use_no_semi.o)
-    0x0800023e   0x0800023e   0x00000000   Code   RO          433    .text               c_w.l(indicate_semi.o)
+    0x08000228   0x08000228   0x00000008   Code   RO          373    .text               c_w.l(libspace.o)
+    0x08000230   0x08000230   0x0000000c   Code   RO          436    .text               c_w.l(sys_exit.o)
+    0x0800023c   0x0800023c   0x00000002   Code   RO          451    .text               c_w.l(use_no_semi.o)
+    0x0800023e   0x0800023e   0x00000000   Code   RO          453    .text               c_w.l(indicate_semi.o)
     0x0800023e   0x0800023e   0x00000002   PAD
-    0x08000240   0x08000240   0x00000010   Code   RO           43    .text.CLK_PORTA     clc.o
-    0x08000250   0x08000250   0x0000000a   Code   RO           47    .text.CLK_TIMER1    clc.o
-    0x0800025a   0x0800025a   0x00000002   PAD
-    0x0800025c   0x0800025c   0x00000022   Code   RO           23    .text.EXT_INT1_IRQHandler  init.o
-    0x0800027e   0x0800027e   0x00000002   PAD
-    0x08000280   0x08000280   0x0000015c   Code   RO           92    .text.PORT_Init     mdr32fxqi_port.o
-    0x080003dc   0x080003dc   0x0000000a   Code   RO           96    .text.PORT_ReadInputDataBit  mdr32fxqi_port.o
-    0x080003e6   0x080003e6   0x00000002   PAD
-    0x080003e8   0x080003e8   0x00000018   Code   RO          102    .text.PORT_ResetBits  mdr32fxqi_port.o
-    0x08000400   0x08000400   0x00000016   Code   RO          100    .text.PORT_SetBits  mdr32fxqi_port.o
-    0x08000416   0x08000416   0x00000002   PAD
-    0x08000418   0x08000418   0x00000032   Code   RO           27    .text.PORT_UserInit  init.o
-    0x0800044a   0x0800044a   0x00000002   PAD
-    0x0800044c   0x0800044c   0x00000018   Code   RO          182    .text.RST_CLK_PCLKcmd  mdr32fxqi_rst_clk.o
-    0x08000464   0x08000464   0x0000003c   Code   RO           17    .text.STick_init    init.o
-    0x080004a0   0x080004a0   0x00000018   Code   RO           19    .text.SysTick_Handler  init.o
-    0x080004b8   0x080004b8   0x00000136   Code   RO           78    .text.SystemInit    system_k1986ve9xi.o
-    0x080005ee   0x080005ee   0x00000002   PAD
-    0x080005f0   0x080005f0   0x0000006a   Code   RO          312    .text.TIMER_BRGInit  mdr32fxqi_timer.o
-    0x0800065a   0x0800065a   0x00000002   PAD
-    0x0800065c   0x0800065c   0x00000006   Code   RO          304    .text.TIMER_ClearFlag  mdr32fxqi_timer.o
-    0x08000662   0x08000662   0x00000002   PAD
-    0x08000664   0x08000664   0x00000010   Code   RO          200    .text.TIMER_Cmd     mdr32fxqi_timer.o
-    0x08000674   0x08000674   0x0000003c   Code   RO          196    .text.TIMER_CntInit  mdr32fxqi_timer.o
-    0x080006b0   0x080006b0   0x0000000e   Code   RO          310    .text.TIMER_GetITStatus  mdr32fxqi_timer.o
-    0x080006be   0x080006be   0x00000002   PAD
-    0x080006c0   0x080006c0   0x00000014   Code   RO          308    .text.TIMER_ITConfig  mdr32fxqi_timer.o
-    0x080006d4   0x080006d4   0x0000006c   Code   RO           56    .text.TIM_Init      tmr.o
-    0x08000740   0x08000740   0x00000028   Code   RO           25    .text.Timer1_IRQHandler  init.o
-    0x08000768   0x08000768   0x00000014   Code   RO           21    .text.delay         init.o
-    0x0800077c   0x0800077c   0x0000002e   Code   RO            2    .text.main          main.o
-    0x080007aa   0x080007aa   0x00000002   PAD
-    0x080007ac   0x080007ac   0x00000040   Data   RO           80    .rodata.EEPROM_FACTORY_READ_WORD_FUNC  system_k1986ve9xi.o
-    0x080007ec   0x080007ec   0x00000020   Data   RO          489    Region$$Table       anon$$obj.o
+    0x08000240   0x08000240   0x0000000a   Code   RO           31    .text.CLK_TIMER1    clc.o
+    0x0800024a   0x0800024a   0x00000002   PAD
+    0x0800024c   0x0800024c   0x00000064   Code   RO           29    .text.CPU_Init      clc.o
+    0x080002b0   0x080002b0   0x00000022   Code   RO           13    .text.EXT_INT1_IRQHandler  init.o
+    0x080002d2   0x080002d2   0x00000002   PAD
+    0x080002d4   0x080002d4   0x0000003c   Code   RO           55    .text.PORTA_LED     port.o
+    0x08000310   0x08000310   0x0000015c   Code   RO          112    .text.PORT_Init     mdr32fxqi_port.o
+    0x0800046c   0x0800046c   0x0000000a   Code   RO          116    .text.PORT_ReadInputDataBit  mdr32fxqi_port.o
+    0x08000476   0x08000476   0x00000002   PAD
+    0x08000478   0x08000478   0x00000018   Code   RO          122    .text.PORT_ResetBits  mdr32fxqi_port.o
+    0x08000490   0x08000490   0x00000016   Code   RO          120    .text.PORT_SetBits  mdr32fxqi_port.o
+    0x080004a6   0x080004a6   0x00000002   PAD
+    0x080004a8   0x080004a8   0x00000016   Code   RO           15    .text.PORT_UserInit  init.o
+    0x080004be   0x080004be   0x00000002   PAD
+    0x080004c0   0x080004c0   0x00000038   Code   RO           57    .text.PORTС_LED    port.o
+    0x080004f8   0x080004f8   0x00000018   Code   RO          202    .text.RST_CLK_PCLKcmd  mdr32fxqi_rst_clk.o
+    0x08000510   0x08000510   0x0000003c   Code   RO           68    .text.STick_init    systick.o
+    0x0800054c   0x0800054c   0x00000018   Code   RO           70    .text.SysTick_Handler  systick.o
+    0x08000564   0x08000564   0x0000006e   Code   RO           96    .text.SystemCoreClockUpdate  system_k1986ve9xi.o
+    0x080005d2   0x080005d2   0x00000002   PAD
+    0x080005d4   0x080005d4   0x00000136   Code   RO           98    .text.SystemInit    system_k1986ve9xi.o
+    0x0800070a   0x0800070a   0x00000002   PAD
+    0x0800070c   0x0800070c   0x0000006a   Code   RO          332    .text.TIMER_BRGInit  mdr32fxqi_timer.o
+    0x08000776   0x08000776   0x00000002   PAD
+    0x08000778   0x08000778   0x00000006   Code   RO          324    .text.TIMER_ClearFlag  mdr32fxqi_timer.o
+    0x0800077e   0x0800077e   0x00000002   PAD
+    0x08000780   0x08000780   0x0000000e   Code   RO          330    .text.TIMER_GetITStatus  mdr32fxqi_timer.o
+    0x0800078e   0x0800078e   0x00000002   PAD
+    0x08000790   0x08000790   0x0000008c   Code   RO           44    .text.TIM_Init_CMSIS  tmr.o
+    0x0800081c   0x0800081c   0x00000056   Code   RO           46    .text.Timer1_IRQHandler  tmr.o
+    0x08000872   0x08000872   0x00000002   PAD
+    0x08000874   0x08000874   0x0000000a   Code   RO            2    .text.main          main.o
+    0x0800087e   0x0800087e   0x00000002   PAD
+    0x08000880   0x08000880   0x00000040   Data   RO          100    .rodata.EEPROM_FACTORY_READ_WORD_FUNC  system_k1986ve9xi.o
+    0x080008c0   0x080008c0   0x00000020   Data   RO          509    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000810, Size: 0x00000670, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080008e0, Size: 0x00000670, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08000810   0x00000004   Data   RW           81    .data.SystemCoreClock  system_k1986ve9xi.o
-    0x20000004   0x08000814   0x00000004   PAD
-    0x20000008        -       0x00000060   Zero   RW          354    .bss                c_w.l(libspace.o)
-    0x20000068        -       0x00000004   Zero   RW           30    .bss.buttonFlag     init.o
-    0x2000006c        -       0x00000004   Zero   RW           29    .bss.delay_cnt      init.o
-    0x20000070        -       0x00000200   Zero   RW           67    HEAP                startup_k1986ve9xi.o
-    0x20000270        -       0x00000400   Zero   RW           66    STACK               startup_k1986ve9xi.o
+    0x20000000   0x080008e0   0x00000004   Data   RW          101    .data.SystemCoreClock  system_k1986ve9xi.o
+    0x20000004   0x080008e4   0x00000004   PAD
+    0x20000008        -       0x00000060   Zero   RW          374    .bss                c_w.l(libspace.o)
+    0x20000068        -       0x00000004   Zero   RW           18    .bss.buttonFlag     init.o
+    0x2000006c        -       0x00000004   Zero   RW           17    .bss.delay_cnt      init.o
+    0x20000070        -       0x00000200   Zero   RW           87    HEAP                startup_k1986ve9xi.o
+    0x20000270        -       0x00000400   Zero   RW           86    STACK               startup_k1986ve9xi.o
 
 
 ==============================================================================
@@ -961,20 +970,22 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        26          0          0          0          0       2288   clc.o
-       228          0          0          0          8       7107   init.o
-        46          0          0          0          0       1272   main.o
+       110          0          0          0          0       2106   clc.o
+        56          0          0          0          8       1734   init.o
+        10          0          0          0          0        342   main.o
        404          0          0          0          0       5748   mdr32fxqi_port.o
         24          0          0          0          0      14992   mdr32fxqi_rst_clk.o
-       222          0          0          0          0      23817   mdr32fxqi_timer.o
+       126          0          0          0          0      23817   mdr32fxqi_timer.o
+       116          0          0          0          0       4973   port.o
        104         26        192          0       1536       1696   startup_k1986ve9xi.o
-       310          0         64          4          0       3655   system_k1986ve9xi.o
-       108          0          0          0          0       6468   tmr.o
+       420          0         64          4          0       3655   system_k1986ve9xi.o
+        84          0          0          0          0       2813   systick.o
+       226          0          0          0          0       7556   tmr.o
 
     ----------------------------------------------------------------------
-      1492         26        288          4       1548      67043   Object Totals
+      1704         26        288          4       1548      69432   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        20          0          0          0          4          0   (incl. Padding)
+        24          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1021,15 +1032,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1772         42        288          4       1644      67379   Grand Totals
-      1772         42        288          4       1644      67379   ELF Image Totals
-      1772         42        288          4          0          0   ROM Totals
+      1984         42        288          4       1644      69728   Grand Totals
+      1984         42        288          4       1644      69728   ELF Image Totals
+      1984         42        288          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 2060 (   2.01kB)
+    Total RO  Size (Code + RO Data)                 2272 (   2.22kB)
     Total RW  Size (RW Data + ZI Data)              1648 (   1.61kB)
-    Total ROM Size (Code + RO Data + RW Data)       2064 (   2.02kB)
+    Total ROM Size (Code + RO Data + RW Data)       2276 (   2.22kB)
 
 ==============================================================================
 

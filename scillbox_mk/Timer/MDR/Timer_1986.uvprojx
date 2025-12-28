@@ -424,6 +424,36 @@
               <FileType>5</FileType>
               <FilePath>.\Init\tmr.h</FilePath>
             </File>
+            <File>
+              <FileName>Port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Init\Port.c</FilePath>
+            </File>
+            <File>
+              <FileName>Port.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Init\Port.h</FilePath>
+            </File>
+            <File>
+              <FileName>SysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Init\SysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>SysTick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Init\SysTick.h</FilePath>
+            </File>
+            <File>
+              <FileName>PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Init\PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>PWM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Init\PWM.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

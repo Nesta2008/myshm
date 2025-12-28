@@ -45,9 +45,9 @@ void TIM_Init (void)      // функция настройки таймера п
   TIMER_Reset(MDR_TIMER1);// Деинициализация
 
   TIMER_CntInitTypeDef Tim_CntInitStruct;      //Создание структуры для программирования таймера.
-  Tim_CntInitStruct.TIMER_Prescaler = 8000-1  ;
-  Tim_CntInitStruct.TIMER_Period = 800;
-  Tim_CntInitStruct.TIMER_CounterMode = TIMER_CntMode_ClkFixedDir;         //Период
+  Tim_CntInitStruct.TIMER_Prescaler = (8000-1);
+  Tim_CntInitStruct.TIMER_Period = 800;                               //Период
+  Tim_CntInitStruct.TIMER_CounterMode = TIMER_CntMode_ClkFixedDir;         //Режим счета - фиксированный вперед
   Tim_CntInitStruct.TIMER_CounterDirection = TIMER_CntDir_Up;      //направление счета
   Tim_CntInitStruct.TIMER_EventSource = TIMER_EvSrc_TM1;             //источник событий
   Tim_CntInitStruct.TIMER_FilterSampling = TIMER_FDTS_TIMER_CLK_div_1;        //Фильтр событий
@@ -57,17 +57,19 @@ void TIM_Init (void)      // функция настройки таймера п
   Tim_CntInitStruct.TIMER_ETR_Polarity = TIMER_ETRPolarity_NonInverted;
   Tim_CntInitStruct.TIMER_ETR_Prescaler = TIMER_ETR_Prescaler_None;
   
-  TIMER_CntInit (MDR_TIMER1, &Tim_CntInitStruct);
+  TIMER_CntInit (MDR_TIMER1, &Tim_CntInitStruct);    //Инициализация созданной структуры
   
-  TIMER_BRGInit (MDR_TIMER1, TIMER_HCLKdiv1);
-  
+  TIMER_BRGInit (MDR_TIMER1, TIMER_HCLKdiv1);         /*функция, которая подаёт тактовый сигнал, на основе которого таймер ведёт счёт. 
+                                                      У функции есть два параметра: первый — имя таймера, второй — делитель. 
+                                                      TIMER_BRGInit также разрешает подачу сигнала тактирования на таймер по умолчанию */
+                                                      
   NVIC_EnableIRQ (Timer1_IRQn);     // Разрешение обработки прерывания от таймера 
 
   NVIC_SetPriority (Timer1_IRQn, 0); //Назначение приоритета прерывания от таймера 
 
   TIMER_ITConfig (MDR_TIMER1, TIMER_STATUS_CNT_ZERO, ENABLE);
 
-  TIMER_Cmd(MDR_TIMER1, ENABLE);
+  TIMER_Cmd(MDR_TIMER1, ENABLE); //Включение таймера
 }
 /*---------------------функция настройки таймера по уроку scillbox----*/
 
@@ -77,15 +79,23 @@ void TIM_Init_CMSIS (void)      // функция настройки тайме�
 {
   CLK_TIMER1 ();          //тактирование таймера 1
 
- TIMER_Reset(MDR_TIMER1);// Деинициализация
-
-  MDR_TIMER1->PSG = 80 - 1;     // Предделитель тактовой частоты
+  TIMER_Reset(MDR_TIMER1);// Деинициализация
+  /*
+      Нам нужно:
+      1. Настроить основной таймер.
+      2. Настроить канал таймера.
+      3. Настроить вывод таймера.
+      4. Настроить тактовую частоту для работы всего таймера.
+      5. Включить таймер.
+  */
+  
+  MDR_TIMER1->PSG = (800 - 1);     // Предделитель тактовой частоты
 
   // Период перезагрузки;
   // значение выбрано для периода в 1 секунду по формуле:
   // Tr = (PSG / CLK) * (ARR + 1)
-MDR_TIMER1->PSG=100;              // Начальное значение счета  
-MDR_TIMER1->ARR = 39999;
+  MDR_TIMER1->CNT=0;              // Начальное значение счета  
+  MDR_TIMER1->ARR = 8000;
 
   // Общая конфигурация
   MDR_TIMER1->CNTRL |= (1 << TIMER_CNTRL_CNT_EN_Pos)      // Работа таймера (пока отключён)
@@ -97,9 +107,28 @@ MDR_TIMER1->ARR = 39999;
 
   // Настройка запросов на обработку прерываний
   MDR_TIMER1->IE |= (1 << TIMER_IE_CNT_ARR_EVENT_IE_Pos);  // Прерывание при CNT = ARR
-
+  TIMER_BRGInit (MDR_TIMER1, TIMER_HCLKdiv1);
+  
   // Конфигурация контроллера NVIC
-  NVIC_SetPriority(Timer1_IRQn,1);  // Приоритет прерываний
+  NVIC_SetPriority(Timer1_IRQn,0);  // Приоритет прерываний
   NVIC_EnableIRQ(Timer1_IRQn);       // Разрешение обработки прерываний
 }
  
+/*-----Прерывание по таймеру TIM1------*/
+void Timer1_IRQHandler (void)
+{
+ if (TIMER_GetITStatus (MDR_TIMER1, TIMER_STATUS_CNT_ARR)){
+    if(PORT_ReadInputDataBit(MDR_PORTA, PORT_Pin_1) != SET)
+        {
+        PORT_SetBits (MDR_PORTA, PORT_Pin_1);
+        PORT_ResetBits (MDR_PORTC, PORT_Pin_2);
+        } else 
+          {
+            PORT_ResetBits (MDR_PORTA, PORT_Pin_1);  
+            PORT_SetBits (MDR_PORTC, PORT_Pin_2);
+          }
+  }
+  TIMER_ClearITPendingBit(MDR_TIMER1, TIMER_STATUS_CNT_ARR); //Сброс флага прерываний
+  
+  }
+/*--------------------*/

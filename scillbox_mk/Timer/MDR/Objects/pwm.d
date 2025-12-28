@@ -1,4 +1,4 @@
-./objects/clc.o: Init\clc.c Init\clc.h Init\init.h Init\tmr.h \
+./objects/pwm.o: Init\PWM.c Init\PWM.h Init\init.h Init\clc.h Init\tmr.h \
   D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_timer.h \
   RTE\Device\K1986VE92xI\MDR32FxQI_config.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \

@@ -20,7 +20,6 @@ void СPU_Reset (void)         // Деинициализация системы 
 }
 
 
-
 void CPU_Init (void)      // Инициализация системы тактирования
 {
 // Деинициализация системы тактирования
@@ -53,17 +52,7 @@ while ((MDR_RST_CLK->CLOCK_STATUS & RST_CLK_CLOCK_STATUS_HSE_RDY)== 0)
 }
 
 
-void CLK_PORTA (void)
-{
-  //RST_CLK_PCLKcmd (RST_CLK_PCLK_PORTA, ENABLE);       //Два различных варианта включения тактирования - spl
-  MDR_RST_CLK->PER_CLOCK |= (1 << RST_CLK_PER_CLOCK_PCLK_EN_PORTA_Pos);     //CMSIS
-}
 
-void CLK_PORTC (void)
-{
-  RST_CLK_PCLKcmd (RST_CLK_PCLK_PORTC, ENABLE);
-  //MDR_RST_CLK->PER_CLOCK |= (1 << RST_CLK_PER_CLOCK_PCLK_EN_PORTC_Pos);
-}
 
 void CLK_TIMER1 (void)              //тактирование таймера 1
 {

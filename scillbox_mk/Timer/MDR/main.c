@@ -10,7 +10,7 @@ int main (void)
 {
 	STick_init ();
 	PORT_UserInit ();
-	TIM_Init ();
+	
 		
 	while (1)
 	{
@@ -24,10 +24,10 @@ int main (void)
   }
 	*/
 	//PORT_SetBits (MDR_PORTA, PORT_Pin_1);
-	delay (500);
+	//delay (500);
 	
-	PORT_ResetBits (MDR_PORTA, PORT_Pin_1);	
-	delay (500);
+	//PORT_ResetBits (MDR_PORTA, PORT_Pin_1);	
+	//delay (500);
 	
 	/*PORT_SetBits (MDR_PORTC, PORT_Pin_2);
 	//for (volatile int i=0; i<DELAY; i++);
