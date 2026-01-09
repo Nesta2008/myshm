@@ -8,17 +8,12 @@
 
 
 
-volatile uint32_t delay_cnt = 0;
+
 volatile int buttonFlag = 0;
 
 
 
-void delay (uint32_t delay_ms) //ФУНКЦИЯ БЕСКОНЕЧНОГО ЦИКЛА
-{
-delay_cnt = delay_ms;
-while (delay_cnt) {}
-}
-/*----------------------------------------------------------*/
+
 
 /*---------Прерывания по внешнему воздействию----------*/
 void EXT_INT1_IRQHandler (void)
@@ -38,8 +33,10 @@ void PORT_UserInit (void)             //ИНИЦИАЛИЗАЦИЯ ВСЕЙ ПЕ
 {
   CPU_Init ();
   PORTA_LED ();
+  PORTA_LED_PWM ();  //Запрограмировали порт 
   PORTС_LED ();
   //PORTA_Button ();
   //TIM_Init ();
-  TIM_Init_CMSIS();
+  //TIM_Init_CMSIS();
+  TIM1_PWM ();
 }

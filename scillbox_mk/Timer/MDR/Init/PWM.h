@@ -1,6 +1,12 @@
 #ifndef __PWM_H
 #define __PWM_H
 
+#include "init.h"
+#include "tmr.h"
+#include "MDR32FxQI_timer.h" 
+
+extern volatile uint32_t pwm_cnt;
+
 
 // Требуемая частота широтно-импульсной модуляции (в Гц) 
 #define PULSE_FREQUENCY 1000 
@@ -15,9 +21,6 @@
 #define PULSE_PERIOD(F) ((uint16_t)(SystemCoreClock /((uint32_t)F * (TIMER1_PRESCALER+1)) - 1)) 
 
 
-
-#include "init.h"
-#include "tmr.h"
 
 void TIM1_PWM (void); // функция настройки ШИМ
 

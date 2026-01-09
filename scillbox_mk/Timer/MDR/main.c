@@ -20,21 +20,25 @@ int main (void)
     buttonFlag = 0;
   }
   else {  
-  PORT_ResetBits (MDR_PORTA, PORT_Pin_3);
-  }
+        PORT_ResetBits (MDR_PORTA, PORT_Pin_3);
+        }
 	*/
-	//PORT_SetBits (MDR_PORTA, PORT_Pin_1);
-	//delay (500);
+	/*PORT_SetBits (MDR_PORTA, PORT_Pin_1);
+	delay (500);
 	
-	//PORT_ResetBits (MDR_PORTA, PORT_Pin_1);	
-	//delay (500);
-	
+	PORT_ResetBits (MDR_PORTA, PORT_Pin_1);*/	
+	delay (500);
+	TIMER_SetChnCompare(MDR_TIMER1,TIMER_CHANNEL2,pwm_cnt++);
+  if (pwm_cnt==500)
+    {
+      pwm_cnt=0;
+      ;
+    }
+
 	/*PORT_SetBits (MDR_PORTC, PORT_Pin_2);
-	//for (volatile int i=0; i<DELAY; i++);
-  delay (500);
+	delay (500);
     
   PORT_ResetBits (MDR_PORTC, PORT_Pin_2);
-  //for (volatile int i=0; i<DELAY; i++);
-  delay (500);	*/
+  delay (500);*/ 	
   }
 }

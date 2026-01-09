@@ -15,11 +15,28 @@ void PORTA_LED (void)      //Функция программирования с�
   PORTA_InitStruct.PORT_FUNC = PORT_FUNC_PORT;  
   PORTA_InitStruct.PORT_OE = PORT_OE_OUT;
   PORTA_InitStruct.PORT_MODE = PORT_MODE_DIGITAL;
-  PORTA_InitStruct.PORT_Pin = PORT_Pin_1 | PORT_Pin_3;
+  PORTA_InitStruct.PORT_Pin = PORT_Pin_1 /*| PORT_Pin_3*/;
   PORTA_InitStruct.PORT_SPEED = PORT_SPEED_FAST;
   
   PORT_Init(MDR_PORTA,&PORTA_InitStruct);   //Инициализация порта
 }
+
+void PORTA_LED_PWM (void)      //Функция программирования светодиода на порте А под ШИМ
+{
+  //RST_CLK_PCLKcmd (RST_CLK_PCLK_PORTA, ENABLE);       //Два различных варианта включения тактирования - spl
+  MDR_RST_CLK->PER_CLOCK |= (1 << RST_CLK_PER_CLOCK_PCLK_EN_PORTA_Pos);     //CMSIS
+	
+  PORT_InitTypeDef PORTA_InitStruct;    // Создание структуры для программирования порта;
+
+  PORTA_InitStruct.PORT_FUNC = PORT_FUNC_ALTER;  //Альтернативная функция порта
+  PORTA_InitStruct.PORT_OE = PORT_OE_OUT;
+  PORTA_InitStruct.PORT_MODE = PORT_MODE_DIGITAL;
+  PORTA_InitStruct.PORT_Pin =  PORT_Pin_3;
+  PORTA_InitStruct.PORT_SPEED = PORT_SPEED_MAXFAST;
+  
+  PORT_Init(MDR_PORTA,&PORTA_InitStruct);   //Инициализация порта
+}
+
 
 void PORTС_LED (void)      //Функция программирования светодиода на порте С
 {

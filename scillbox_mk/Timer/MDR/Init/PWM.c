@@ -19,6 +19,64 @@ ARR = SystemCoreClock/ (F*(PSG+1))-1;
 
 #include "PWM.h"
 
+volatile uint32_t pwm_cnt=0;
+
+void TIM1_PWM (void) // функция настройки ШИМ
+{
+  
+  CLK_TIMER1 ();          //тактирование таймера 1
+  
+  TIMER_Reset(MDR_TIMER1);// Деинициализация
+  /*----------------------------------------------------*/
+  TIMER_CntInitTypeDef Tim_CntStr;  //Инициализация таймера
+  Tim_CntStr.TIMER_Prescaler = 0;
+  Tim_CntStr.TIMER_Period = 1000;
+  Tim_CntStr.TIMER_ARR_UpdateMode = TIMER_ARR_Update_Immediately ;
+  Tim_CntStr.TIMER_BRK_Polarity = TIMER_BRKPolarity_NonInverted;
+  Tim_CntStr.TIMER_CounterDirection = TIMER_CntDir_Up;
+  Tim_CntStr.TIMER_CounterMode = TIMER_CntMode_ClkFixedDir;
+  Tim_CntStr.TIMER_ETR_FilterConf = TIMER_Filter_1FF_at_TIMER_CLK;
+  Tim_CntStr.TIMER_ETR_Polarity = TIMER_ETRPolarity_NonInverted;
+  Tim_CntStr.TIMER_ETR_Prescaler = TIMER_ETR_Prescaler_None;
+  Tim_CntStr.TIMER_EventSource = TIMER_EvSrc_TM1;
+  Tim_CntStr.TIMER_FilterSampling = TIMER_FDTS_TIMER_CLK_div_1;
+  
+  TIMER_CntInit (MDR_TIMER1, &Tim_CntStr);    //Инициализация созданной структуры
+  /*----------------------------------------------------*/
+
+  TIMER_ChnInitTypeDef Tim_ChnStr;   //Инициализация канала таймера.  Именно в этой функции мы формируем сигнал на REF для ШИМ.
+  Tim_ChnStr.TIMER_CH_Mode = TIMER_CH_MODE_PWM;        // Режим канала (не захват, а ШИМ)
+  Tim_ChnStr.TIMER_CH_REF_Format = TIMER_CH_REF_Format6;  //Напряжение опорного сигнала
+  Tim_ChnStr.TIMER_CH_Number = TIMER_CHANNEL2;  //Номер канала, который будем использовать. Согласно распиновке МК РА3 - альтернативная функция
+  
+  TIMER_ChnInit(MDR_TIMER1,&Tim_ChnStr);//Инициализация созданной структуры
+
+  //TIMER_SetChnCompare(MDR_TIMER1,TIMER_CHANNEL2,10); //Заполнение?
+
+  /*----------------------------------------------------*/
+  TIMER_ChnOutInitTypeDef Tim_Out;//Настройка режимов на выход
+  Tim_Out.TIMER_CH_DirOut_Polarity = TIMER_CHOPolarity_NonInverted; //Направление полярности
+  Tim_Out.TIMER_CH_DirOut_Source = TIMER_CH_OutSrc_REF;    //Источник.    Тут источник опорного напряжения прямого выхода // На выход REF сигнал.
+  Tim_Out.TIMER_CH_DirOut_Mode = TIMER_CH_OutMode_Output;       //Режим // Всегда выход
+  Tim_Out.TIMER_CH_Number = TIMER_CHANNEL2;          //Номер канала
+
+  TIMER_ChnOutInit(MDR_TIMER1,&Tim_Out); //Инициализация созданной структуры
+  /*----------------------------------------------------*/
+
+  TIMER_BRGInit (MDR_TIMER1, TIMER_HCLKdiv1);         /*функция, которая подаёт тактовый сигнал, на основе которого таймер ведёт счёт. 
+                                                      У функции есть два параметра: первый — имя таймера, второй — делитель. 
+                                                      TIMER_BRGInit также разрешает подачу сигнала тактирования на таймер по умолчанию */
+
+  TIMER_Cmd(MDR_TIMER1, ENABLE); //Включение таймера
+  
+
+}
+
+
+
+
+
+
 void TIM1_PWM_CMSIS (void) // функция настройки ШИМ
 {
   CLK_TIMER1 ();          //тактирование таймера 1
@@ -79,13 +137,4 @@ void TIM1_PWM_CMSIS (void) // функция настройки ШИМ
 }
 
 
-void TIM1_PWM (void) // функция настройки ШИМ
-{
-  CLK_TIMER1 ();          //тактирование таймера 1
-  
-  TIMER_Reset(MDR_TIMER1);// Деинициализация
 
-
-
-
-}

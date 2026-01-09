@@ -17,7 +17,7 @@
         <TargetCommonOption>
           <Device>K1986VE92xI</Device>
           <Vendor>Milandr</Vendor>
-          <PackID>Milandr.MDR32FxQI.1.3.0</PackID>
+          <PackID>Milandr.MDR32FxQI.1.3.2</PackID>
           <Cpu>IRAM(0x20000000,0x8000) IROM(0x08000000,0x20000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\MDR;.\Init</IncludePath>
+              <IncludePath>..\MDR;.\Init;.\Init</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -507,7 +507,7 @@
       <file attr="config" category="linkerScript" name="IDE\scatter\K1986VE9xI.sct" version="2.2.0i">
         <instance index="0">RTE\Device\K1986VE92xI\K1986VE9xI.sct</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Milandr" Cversion="2.2.0i" condition="CON_K1986VE92xI"/>
-        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.0"/>
+        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.2"/>
         <targetInfos>
           <targetInfo name="K1986BE92U"/>
         </targetInfos>
@@ -515,7 +515,7 @@
       <file attr="config" category="header" name="Libraries\SPL\MDR32FxQI\MDR32FxQI_config.h" version="2.2.0i">
         <instance index="0">RTE\Device\K1986VE92xI\MDR32FxQI_config.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Milandr" Cversion="2.2.0i" condition="CON_K1986VE92xI"/>
-        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.0"/>
+        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.2"/>
         <targetInfos>
           <targetInfo name="K1986BE92U"/>
         </targetInfos>
@@ -523,7 +523,7 @@
       <file attr="config" category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\arm\startup_K1986VE9xI.S" version="2.2.0i">
         <instance index="0">RTE\Device\K1986VE92xI\startup_K1986VE9xI.S</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Milandr" Cversion="2.2.0i" condition="CON_K1986VE92xI"/>
-        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.0"/>
+        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.2"/>
         <targetInfos>
           <targetInfo name="K1986BE92U"/>
         </targetInfos>
@@ -531,7 +531,7 @@
       <file attr="config" category="source" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\system_K1986VE9xI.c" version="2.2.0i">
         <instance index="0">RTE\Device\K1986VE92xI\system_K1986VE9xI.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Milandr" Cversion="2.2.0i" condition="CON_K1986VE92xI"/>
-        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.0"/>
+        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.2"/>
         <targetInfos>
           <targetInfo name="K1986BE92U"/>
         </targetInfos>
@@ -539,7 +539,7 @@
       <file attr="config" category="header" name="Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\startup\system_K1986VE9xI.h" version="2.2.0i">
         <instance index="0">RTE\Device\K1986VE92xI\system_K1986VE9xI.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Milandr" Cversion="2.2.0i" condition="CON_K1986VE92xI"/>
-        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.0"/>
+        <package name="MDR32FxQI" schemaVersion="1.2" url="" vendor="Milandr" version="1.3.2"/>
         <targetInfos>
           <targetInfo name="K1986BE92U"/>
         </targetInfos>
