@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\port.o"
+".\objects\timer.o"
+".\objects\startup_k1986ve9xi.o"
+".\objects\system_k1986ve9xi.o"
+".\objects\mdr32fxqi_port.o"
+".\objects\mdr32fxqi_rst_clk.o"
+".\objects\mdr32fxqi_timer.o"
+--strict --scatter ".\Objects\MDR_Timer_les_4.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MDR_Timer_les_4.map" -o .\Objects\MDR_Timer_les_4.axf

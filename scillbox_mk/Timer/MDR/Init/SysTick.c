@@ -21,10 +21,20 @@ delay_cnt--;
 /*--------ПРЕРЫВАНИЕ ЧЕРЕЗ SysTick И ФУНКЦИЮ delay----------*/
 void STick_init (void)
 {
-SysTick->LOAD |= (16000)-1;
-SysTick->LOAD |= (16000)-1;
-SysTick->CTRL |= ~SysTick_CTRL_ENABLE_Pos;
-SysTick->CTRL |= SysTick_CTRL_COUNTFLAG_Pos;
-SysTick->CTRL |= ~SysTick_CTRL_ENABLE_Pos;
-NVIC_SetPriority(SysTick_IRQn, 1);
+// Деинициализация
+  SysTick->CTRL = 0;
+  SysTick->LOAD = 0;
+  SysTick->VAL  = 0;
+
+  // Установка периода перезагрузки
+  SysTick->LOAD = (SystemCoreClock / SYSTEM_TICK_RATE) - 1;
+
+  // Конфигурация
+  SysTick->CTRL = (1 << SysTick_CTRL_ENABLE_Pos)      // Работа таймера (включён)
+                | (1 << SysTick_CTRL_TICKINT_Pos)     // Запрос на прерывание (разрешён)
+                | (1 << SysTick_CTRL_CLKSOURCE_Pos);  // Источник тактирования таймера (HCLK)
+
+  // Конфигурация контроллера NVIC
+  NVIC_SetPriority(SysTick_IRQn, 7);  // Приоритет прерываний
+  NVIC_EnableIRQ(SysTick_IRQn);       // Разрешение обработки прерываний
 }

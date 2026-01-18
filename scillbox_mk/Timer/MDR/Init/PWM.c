@@ -45,19 +45,35 @@ void TIM1_PWM (void) // функция настройки ШИМ
   /*----------------------------------------------------*/
 
   TIMER_ChnInitTypeDef Tim_ChnStr;   //Инициализация канала таймера.  Именно в этой функции мы формируем сигнал на REF для ШИМ.
-  Tim_ChnStr.TIMER_CH_Mode = TIMER_CH_MODE_PWM;        // Режим канала (не захват, а ШИМ)
-  Tim_ChnStr.TIMER_CH_REF_Format = TIMER_CH_REF_Format6;  //Напряжение опорного сигнала
+  Tim_ChnStr.TIMER_CH_BRK_Reset = TIMER_CH_BRK_RESET_Disable; // Сброс канала BRK не производится (BRK не используем).
+  Tim_ChnStr.TIMER_CH_CCR1_Ena =	DISABLE; // CCR1 не используем.
+  Tim_ChnStr.TIMER_CH_CCR1_EventSource =	TIMER_CH_CCR1EvSrc_PE; // Выбор события по входному каналу для CAP1: положительный фронт по Chi. (По умолчанию, мы не используем).
+  Tim_ChnStr.TIMER_CH_CCR_UpdateMode = TIMER_CH_CCR_Update_Immediately; // Регистр CCR можно обновлять в любое время (CCR не используем).
+  Tim_ChnStr.TIMER_CH_ETR_Ena = DISABLE; // ETR не используется.
+  Tim_ChnStr.TIMER_CH_ETR_Reset = TIMER_CH_ETR_RESET_Disable; // Сброс ETR не производится.
+  Tim_ChnStr.TIMER_CH_EventSource = TIMER_CH_EvSrc_PE;								// Выбор события по входному каналу: положительный фронт. (Так же не используется).
+  Tim_ChnStr.TIMER_CH_FilterConf = TIMER_Filter_1FF_at_TIMER_CLK; // Входной сигнал от TIMER_CLK фиксируется одним триггером.
+  Tim_ChnStr.TIMER_CH_Mode = TIMER_CH_MODE_PWM; // Канал в ШИМ режиме.
   Tim_ChnStr.TIMER_CH_Number = TIMER_CHANNEL2;  //Номер канала, который будем использовать. Согласно распиновке МК РА3 - альтернативная функция
-  
+  Tim_ChnStr.TIMER_CH_Prescaler = TIMER_CH_Prescaler_None; // В канале частота не делится.
+  Tim_ChnStr.TIMER_CH_REF_Format = TIMER_CH_REF_Format6; //Напряжение опорного сигнала
+
+
   TIMER_ChnInit(MDR_TIMER1,&Tim_ChnStr);//Инициализация созданной структуры
 
   //TIMER_SetChnCompare(MDR_TIMER1,TIMER_CHANNEL2,10); //Заполнение?
 
   /*----------------------------------------------------*/
   TIMER_ChnOutInitTypeDef Tim_Out;//Настройка режимов на выход
-  Tim_Out.TIMER_CH_DirOut_Polarity = TIMER_CHOPolarity_NonInverted; //Направление полярности
-  Tim_Out.TIMER_CH_DirOut_Source = TIMER_CH_OutSrc_REF;    //Источник.    Тут источник опорного напряжения прямого выхода // На выход REF сигнал.
-  Tim_Out.TIMER_CH_DirOut_Mode = TIMER_CH_OutMode_Output;       //Режим // Всегда выход
+  Tim_Out.TIMER_CH_DirOut_Mode = TIMER_CH_OutMode_Output; //Режим // Всегда выход
+  Tim_Out.TIMER_CH_DirOut_Polarity = TIMER_CHOPolarity_NonInverted; // Неинвертированный.
+  Tim_Out.TIMER_CH_DirOut_Source = TIMER_CH_OutSrc_REF; //Источник.    Тут источник опорного напряжения прямого выхода // На выход REF сигнал.
+  Tim_Out.TIMER_CH_DTG_AuxPrescaler = 0; // Делителя не стоит.
+  Tim_Out.TIMER_CH_DTG_ClockSource = TIMER_CH_DTG_ClkSrc_TIMER_CLK; // Источник тактового сигнала для DTG - TIMER_CLK. Но DTG мы все равно не используем.
+  Tim_Out.TIMER_CH_DTG_MainPrescaler = 0; // Делитель сигнала на DTG.
+  Tim_Out.TIMER_CH_NegOut_Mode = TIMER_CH_OutMode_Input; // Инвертный канал на вход. Все остальные его параметр берем по умолчанию, т.к. они не важны.
+  Tim_Out.TIMER_CH_NegOut_Polarity = TIMER_CHOPolarity_NonInverted; // Без инвертирования инвертированного канала.
+  Tim_Out.TIMER_CH_NegOut_Source = TIMER_CH_DTG_ClkSrc_TIMER_CLK; // Источник тактового сигнала для DTG - TIMER_CLK.
   Tim_Out.TIMER_CH_Number = TIMER_CHANNEL2;          //Номер канала
 
   TIMER_ChnOutInit(MDR_TIMER1,&Tim_Out); //Инициализация созданной структуры

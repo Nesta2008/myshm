@@ -1,0 +1,15 @@
+.\objects\main.o: Main.c
+.\objects\main.o: D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\inc\K1986VE9xI.h
+.\objects\main.o: .\RTE\Device\K1986VE92xI\MDR32FxQI_config.h
+.\objects\main.o: D:\Keil_v5\ARM\ArmCompiler5Last\Bin\..\include\stdint.h
+.\objects\main.o: .\RTE\_K1986BE92U\RTE_Components.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\CMSIS\MDR32FxQI\DeviceSupport\K1986VE9xI\inc\K1986VE9xI.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h
+.\objects\main.o: .\RTE\Device\K1986VE92xI\system_K1986VE9xI.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_rst_clk.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_port.h
+.\objects\main.o: D:\Keil_v5\ARM\Packs\Milandr\MDR32FxQI\1.3.0\Libraries\SPL\MDR32FxQI\inc\MDR32FxQI_timer.h
